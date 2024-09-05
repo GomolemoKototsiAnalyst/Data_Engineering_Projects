@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[23]:
+# In[26]:
 
 
 import streamlit as st
@@ -2129,8 +2129,6 @@ def main_sidebar():
     
 # Display the main sidebar
 main_sidebar()
-
-# Handle page navigation
 
 #warnings.filterwarnings("ignore", category=FutureWarning, module="streamlit")
 query_params = st.experimental_get_query_params()

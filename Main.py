@@ -32,6 +32,21 @@ import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 
+# Function to resize icons and convert to base64
+def get_resized_icon(image_path, width):
+    try:
+        img = Image.open(image_path)
+        aspect_ratio = img.height / img.width
+        resized_img = img.resize((width, int(width * aspect_ratio)))
+        buffered = BytesIO()
+        resized_img.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue()).decode()
+        return img_str
+    except FileNotFoundError:
+        print(f"File not found: {image_path}")
+        return None
+
+
 def intro():
     import streamlit as st
     
@@ -456,10 +471,12 @@ def ITSM_Incident_Portal():
     
     # Start Building a Board:
     with st.sidebar:
+        #svg_url = os.path.join('Images', 'Architectural Design Map.svg')
+        #st.image(svg_url, caption='Architectural Data Design for the Dashboard', use_column_width=True)
         st.markdown("<h2 style='text-align: left;'>Regional Service Group Analysis</h2>", unsafe_allow_html=True)
-        bridge_path = os.path.join('Images', 'logo-c-fc-steinweg2x.png')
+        bridge = os.path.join('Images', 'logo-c-fc-steinweg2x.png')
         #st.image(Gomolemo_path, width=600)
-        st.image(bridge_path, use_column_width=True)  
+        st.image(bridge, use_column_width=True)  
     
         # Initial selection summary:
         if st.checkbox("ALL IT PERSONNEL", value=True):
@@ -664,23 +681,28 @@ def ITSM_Incident_Portal():
     percentage_total =  percentage_on_hold+percentage_resolved+percentage_new+percentage_in_progress+percentage_cancelled
 
     # Path to your local SVG file:
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+    #svg_url = os.path.join('Images', 'family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    #st.image(svg_url, caption='Architectural Data Design for the Dashboard', use_column_width=True)
+    local_svg_path = os.path.join('Images', 'family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    warning_path = os.path.join('Images', 'warning.svg')
+    account_path = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    #groups_iconspath = os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     icon_url = encode_image(local_svg_path)
-    icon_url1 = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/warning.svg')
-    icon_url2 = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-    groups_loc = 'C:/Users/Gomolemo.Kototsi/Downloads/group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+    icon_url1 = encode_image(warning_path)
+    icon_url2 = encode_image(account_path)
+    groups_loc = os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     groups_icon = encode_image(groups_loc)
     
     # A holding Matrice for  local SVG file: - Paths & Urls 
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
-    local_sa = 'C:/Users/Gomolemo.Kototsi/Downloads/south-africa-flag-icon.svg'
-    local_zim = 'C:/Users/Gomolemo.Kototsi/Downloads/Flag_of_Zimbabwe.svg'
-    local_ken = 'C:/Users/Gomolemo.Kototsi/Downloads/kenya-flag-icon.svg'
-    local_tan = 'C:/Users/Gomolemo.Kototsi/Downloads/tanzania-flag-icon.svg'
-    local_zam ='C:/Users/Gomolemo.Kototsi/Downloads/zambia-flag-icon.svg'
-    local_mal = 'C:/Users/Gomolemo.Kototsi/Downloads/malawi-svgrepo-com.svg'
-    local_moz ='C:/Users/Gomolemo.Kototsi/Downloads/mozambique-flag-icon.svg'
-    local_nam = 'C:/Users/Gomolemo.Kototsi/Downloads/Namibia-01-1.svg'
+    local_svg_path = os.path.join('Images', 'family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    local_sa = os.path.join('Images', 'south-africa-flag-icon.svg')
+    local_zim =  os.path.join('Images', 'Flag_of_Zimbabwe.svg')
+    local_ken =  os.path.join('Images', 'kenya-flag-icon.svg')
+    local_tan = os.path.join('Images', 'tanzania-flag-icon.svg')
+    local_zam = os.path.join('Images', 'zambia-flag-icon.svg')
+    local_mal = os.path.join('Images', 'malawi-svgrepo-com.svg')
+    local_moz = os.path.join('Images', 'mozambique-flag-icon.svg')
+    local_nam = os.path.join('Images', 'Namibia-01-1.svg')
     
     
     south_african = encode_image(local_sa)
@@ -693,8 +715,10 @@ def ITSM_Incident_Portal():
     Namibia =encode_image(local_nam)
     
     # Getting a icon using CSS style:- Highest IT Personnel
-    with open("C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
-        svg_icon = file.read()
+    Svg_path_paths = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    svg_icon = encode_image(Svg_path_paths)
+    #with open("C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
+    #    svg_icon = file.read()
      
      # Getting a icon using CSS style: - Highest 
     with open("C:/Users/Gomolemo.Kototsi/Downloads/group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
@@ -2063,19 +2087,6 @@ def SteinTech():
     )
 
     
-# Function to resize icons and convert to base64
-def get_resized_icon(image_path, width):
-    try:
-        img = Image.open(image_path)
-        aspect_ratio = img.height / img.width
-        resized_img = img.resize((width, int(width * aspect_ratio)))
-        buffered = BytesIO()
-        resized_img.save(buffered, format="PNG")
-        img_str = base64.b64encode(buffered.getvalue()).decode()
-        return img_str
-    except FileNotFoundError:
-        print(f"File not found: {image_path}")
-        return None
 
 home_path = os.path.join('Images', 'home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
 analysis_path= os.path.join('Images', 'public_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')

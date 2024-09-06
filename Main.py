@@ -735,10 +735,9 @@ def ITSM_Incident_Portal():
     #with open("C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
     #    svg_icon = file.read()
      
-     # Getting a icon using CSS style: - Highest 
-    with open("C:/Users/Gomolemo.Kototsi/Downloads/group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
-        groups_icon = file.read()
-    
+     # Getting a icon using CSS style: - Highest
+    groups_icon_path =  os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    groups_icon = encode_image(groups_icon_path)
     # Creating a Dictionary for my Countries Flags:
     data = {
         'Country': ['South Africa', 'Zimbabwe','Mozambique', 'Tanzania','Kenya','Zambia','Malawi'],
@@ -1217,13 +1216,19 @@ def ITSM_Incident_Portal():
         """
         st.markdown(pmg_him, unsafe_allow_html=True)
         with st.container():
-            #col1, col2, col3, = st.columns(3)
-            svg_progress = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/pending_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_new = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/domain_add_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_resolved = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/editor_choice_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_total = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/dataset_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_hold = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/back_hand_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_cancelled = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/delete_forever_40dp_3E6184_FILL0_wght400_GRAD0_opsz40.svg')
+            #col1, col2, col3, = st.columns(3):
+            svg_progress_path =  os.path.join('Images', 'pending_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_new_path =  os.path.join('Images', 'domain_add_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_resolved_path =  os.path.join('Images', 'editor_choice_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_total_path =  os.path.join('Images', 'dataset_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_hold_path =  os.path.join('Images', 'back_hand_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_cancelled_path =  os.path.join('Images', 'delete_forever_40dp_3E6184_FILL0_wght400_GRAD0_opsz40.svg')
+            svg_progress = encode_image(svg_progress_path)
+            svg_new = encode_image(svg_new_path)
+            svg_resolved = encode_image(svg_resolved_path)
+            svg_total =  encode_image(svg_total_path)
+            svg_hold = encode_image(svg_hold_path)
+            svg_cancelled = encode_image(svg_cancelled_path)
             def iconMetricContainer(label, value, delta, icon_url):
                 html = f"""
                 <div data-testid="stMetric" style=" display: flex; align-items: center; justify-content: space-between;">

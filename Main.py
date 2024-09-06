@@ -29,12 +29,12 @@ import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
-loc_path = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/incident.csv'
-InProgress = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/InProgress.csv'
-Resolved = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/Resolved.csv'
-OnHold = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/OnHold.csv'
-New = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/New.csv'
-locate = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/sys_user.csv'
+loc_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+InProgress = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
+Resolved = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+OnHold = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
+New = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
+locate = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
 
 data = pd.read_csv(loc_path, encoding='ISO-8859-1')
 InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')

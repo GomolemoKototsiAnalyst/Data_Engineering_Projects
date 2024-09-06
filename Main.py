@@ -29,43 +29,6 @@ import os
 from urllib.parse import urlparse
 warnings.simplefilter(action='ignore', category=Warning)
 
-def read_csv_from_github(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
-    try:
-        # Read the CSV file from the URL
-        data = pd.read_csv(url, encoding=encoding)
-        return data
-    except pd.errors.EmptyDataError:
-        print(f"No data found in the CSV file at {url}.")
-    except pd.errors.ParserError:
-        print(f"Error parsing the CSV file at {url}.")
-    except Exception as e:
-        print(f"An error occurred while reading the CSV file at {url}: {e}")
-    return pd.DataFrame()  # Return an empty DataFrame in case of error
-
-def get_dataframe_name_from_url(url: str) -> str:
-    path = urlparse(url).path
-    filename = path.split('/')[-1]
-    return filename.split('.')[0]  # Remove the file extension
-
-csv_urls = [
-    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv',
-    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv',
-    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv',
-    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv',
-    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
-]
-
-# Import multiple CSV files and store DataFrames with their own names
-data_frames = {}
-for url in csv_urls:
-    name = get_dataframe_name_from_url(url)
-    data_frames[name] = read_csv_from_github(url)
-
-# Access DataFrames using their names
-for name, df in data_frames.items():
-    print(f"Data from {name}:")
-    print(df.head())
-
 # getting the data into the mmain: 
 loc_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
 InProgress = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
@@ -84,21 +47,21 @@ endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
 #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
 #@st.cache_data
 #loc= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-data = pd.read_csv(loc_path, encoding='ISO-8859-1')
+#data = pd.read_csv(loc_path, encoding='ISO-8859-1')
 # Additional Files: 
 #InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+#InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
 
 #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+#Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
 
 #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+#OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
 
 #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-New = pd.read_csv(New, encoding='ISO-8859-1')
+#New = pd.read_csv(New, encoding='ISO-8859-1')
 
-endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
+#endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
 
 def intro():
     import streamlit as st

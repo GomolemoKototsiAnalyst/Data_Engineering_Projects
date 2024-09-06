@@ -29,12 +29,13 @@ import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
-loc_path = './Raw data/incident.csv'
-InProgress = './Raw data/InProgress.csv'
-Resolved = './Raw data/Resolved.csv'
-OnHold = './Raw data/OnHold.csv'
-New = './Raw data/New.csv'
-locate = './Raw data/sys_user.csv'
+loc_path = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/incident.csv'
+InProgress = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/InProgress.csv'
+Resolved = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/Resolved.csv'
+OnHold = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/OnHold.csv'
+New = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/New.csv'
+locate = 'https://github.com/GomolemoKototsiAnalyst/DataHub-App/Raw data/sys_user.csv'
+
 data = pd.read_csv(loc_path, encoding='ISO-8859-1')
 InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
 Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
@@ -340,12 +341,13 @@ def ITSM_Incident_Portal():
         return f"data:image/svg+xml;base64,{encoded}"
 
     # getting the data into the mmain: 
-    loc_path = './Raw data/incident.csv'
-    InProgress = './Raw data/InProgress.csv'
-    Resolved = './Raw data/Resolved.csv'
-    OnHold = './Raw data/OnHold.csv'
-    New = './Raw data/New.csv'
-    locate = './Raw data/sys_user.csv'
+    #loc_path = './Raw data/incident.csv'
+    #InProgress = './Raw data/InProgress.csv'
+    #Resolved = './Raw data/Resolved.csv'
+    #OnHold = './Raw data/OnHold.csv'
+    #New = './Raw data/New.csv'
+    #locate = './Raw data/sys_user.csv'
+    
     data = pd.read_csv(loc_path, encoding='ISO-8859-1')
     InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
     Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
@@ -394,8 +396,8 @@ def ITSM_Incident_Portal():
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
     # Employees ServiceNow location update: 
-    locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
+    #locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
+    #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
     
     # Handle duplicates in df1 by keeping the first occurrence
     endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')

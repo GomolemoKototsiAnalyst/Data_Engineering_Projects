@@ -340,7 +340,21 @@ def ITSM_Incident_Portal():
         with open(image_file, 'rb') as f:
             encoded = base64.b64encode(f.read()).decode()
         return f"data:image/svg+xml;base64,{encoded}"
+    data = pd.read_csv(loc_path)
+    # Additional Files: 
+    #InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
+    InProgress = pd.read_csv(InProgress)
 
+    #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
+    Resolved = pd.read_csv(Resolved)
+
+    #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
+    OnHold = pd.read_csv(OnHold)
+
+    #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
+    New = pd.read_csv(New)
+
+    endusers_list = pd.read_csv(locate)
     # getting the data into the mmain: 
     #loc_path = './Raw data/incident.csv'
     #InProgress = './Raw data/InProgress.csv'
@@ -1245,21 +1259,37 @@ def Testing_Thoughts():
     import matplotlib.pyplot as plt
     
     
-    #Data Source Import: 
-    loc1= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-    data1 = pd.read_csv(loc1, encoding='ISO-8859-1')
+    data1 = pd.read_csv(loc_path)
+    # Additional Files: 
+    #InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
+    InProgress = pd.read_csv(InProgress)
+
+    #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
+    Resolved = pd.read_csv(Resolved)
+
+    #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
+    OnHold = pd.read_csv(OnHold)
+
+    #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
+    New = pd.read_csv(New)
+
+    endusers_list = pd.read_csv(locate)
     
-    InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+    #Data Source Import: 
+    #loc1= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
+    #data1 = pd.read_csv(loc1, encoding='ISO-8859-1')
+    
+    #InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
+    #InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
 
-    Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+    #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
+    #Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
 
-    OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+   # OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
+    #OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
 
-    New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    New = pd.read_csv(New, encoding='ISO-8859-1')
+    #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
+    #New = pd.read_csv(New, encoding='ISO-8859-1')
     
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',

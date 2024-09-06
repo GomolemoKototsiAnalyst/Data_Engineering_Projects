@@ -21,11 +21,11 @@ import folium
 import matplotlib.pyplot as plt
 from PIL import Image
 import base64
-from io import BytesIO
 from streamlit_option_menu import option_menu
 import warnings
 import requests
 from io import StringIO
+from io import BytesIO
 #from io import StringIO
 import os
 #from urllib.parse import urlparse
@@ -313,10 +313,25 @@ def ITSM_Incident_Portal():
     from datetime import datetime, timedelta
     import plotly.graph_objects as go
     import folium
+    from PIL import Image
     import matplotlib.pyplot as plt
     import base64
     import requests
     from io import StringIO
+
+
+    def get_resized_icon(image_path, width):
+        try:
+            img = Image.open(image_path)
+            aspect_ratio = img.height / img.width
+            resized_img = img.resize((width, int(width * aspect_ratio)))
+            buffered = BytesIO()
+            resized_img.save(buffered, format="PNG")
+            img_str = base64.b64encode(buffered.getvalue()).decode()
+            return img_str
+        except FileNotFoundError:
+            print(f"File not found: {image_path}")
+        return None
 
     #st.markdown("Regional Service Group Analysis")   
     #st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')

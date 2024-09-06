@@ -24,6 +24,8 @@ import base64
 from io import BytesIO
 from streamlit_option_menu import option_menu
 import warnings
+from io import StringIO
+import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 def intro():
@@ -2039,12 +2041,17 @@ def get_resized_icon(image_path, width):
         print(f"File not found: {image_path}")
         return None
 
-# Load icons:
-home_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-analysis_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/public_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-compliance_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/bar_chart_4_bars_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-info_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/architecture_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-SteinTech_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/bubble_chart_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
+home_path = os.path.join('Images', 'home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+analysis_path= os.path.join('Images', 'public_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+complianc_path= os.path.join('Images', 'bar_chart_4_bars_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+info_path= os.path.join('Images', 'architecture_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+SteinTecho_path= os.path.join('Images', 'bubble_chart_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+
+home_icon = get_resized_icon(home_path,50)
+analysis_icon = get_resized_icon(analysis_path,50)
+compliance_icon = get_resized_icon(complianc_path,50)
+info_icon = get_resized_icon(info_path,50)
+SteinTech_icon = get_resized_icon(SteinTecho_path,50)
 
 # Creating a pages matrix: 
 #page_names_to_funcs = {

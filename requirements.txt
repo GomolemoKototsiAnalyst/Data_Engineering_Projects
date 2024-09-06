@@ -10,4 +10,3 @@ py3Dmol==2.4.0
 Requests==2.32.3
 streamlit==1.38.0
 streamlit_option_menu==0.3.13
-~treamlit==1.36.0

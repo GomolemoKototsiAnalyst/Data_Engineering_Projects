@@ -345,7 +345,7 @@ def ITSM_Incident_Portal():
     OnHold = read_csv_from_url(url4)
     InProgress = read_csv_from_url(url5)
     data = read_csv_from_url(url3)
-    endusers_list = read_csv_from_url(url3)
+    endusers_list = read_csv_from_url(url6)
 
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:

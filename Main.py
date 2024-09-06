@@ -26,7 +26,45 @@ from streamlit_option_menu import option_menu
 import warnings
 from io import StringIO
 import os
+from urllib.parse import urlparse
 warnings.simplefilter(action='ignore', category=Warning)
+
+def read_csv_from_github(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
+    try:
+        # Read the CSV file from the URL
+        data = pd.read_csv(url, encoding=encoding)
+        return data
+    except pd.errors.EmptyDataError:
+        print(f"No data found in the CSV file at {url}.")
+    except pd.errors.ParserError:
+        print(f"Error parsing the CSV file at {url}.")
+    except Exception as e:
+        print(f"An error occurred while reading the CSV file at {url}: {e}")
+    return pd.DataFrame()  # Return an empty DataFrame in case of error
+
+def get_dataframe_name_from_url(url: str) -> str:
+    path = urlparse(url).path
+    filename = path.split('/')[-1]
+    return filename.split('.')[0]  # Remove the file extension
+
+csv_urls = [
+    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv',
+    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv',
+    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv',
+    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv',
+    #'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+]
+
+# Import multiple CSV files and store DataFrames with their own names
+data_frames = {}
+for url in csv_urls:
+    name = get_dataframe_name_from_url(url)
+    data_frames[name] = read_csv_from_github(url)
+
+# Access DataFrames using their names
+for name, df in data_frames.items():
+    print(f"Data from {name}:")
+    print(df.head())
 
 # getting the data into the mmain: 
 loc_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'

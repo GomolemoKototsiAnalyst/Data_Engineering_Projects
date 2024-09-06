@@ -1,0 +1,13 @@
+altair==5.4.1
+folium==0.17.0
+matplotlib==3.9.2
+numpy==2.1.1
+pandas==2.2.2
+Pillow==10.4.0
+plotly==5.23.0
+py3Dmol==2.3.0
+py3Dmol==2.4.0
+Requests==2.32.3
+streamlit==1.38.0
+streamlit_option_menu==0.3.13
+~treamlit==1.36.0

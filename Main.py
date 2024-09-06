@@ -730,14 +730,18 @@ def ITSM_Incident_Portal():
     Namibia =encode_image(local_nam)
     
     # Getting a icon using CSS style:- Highest IT Personnel
-    Svg_path_paths = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-    svg_icon = encode_image(Svg_path_paths)
-    #with open("C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
-    #    svg_icon = file.read()
-     
-     # Getting a icon using CSS style: - Highest
+    Svg_path_paths = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg') 
+    #svg_icon = encode_image(Svg_path_paths)
+    with open(Svg_path_paths, "r") as file:
+        svg_icon = file.read()
+
+
     groups_icon_path =  os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-    groups_icon = encode_image(groups_icon_path)
+    # Getting a icon using CSS style: - Highest
+    with open(groups_icon_path, "r") as file:
+        #groups_icon_path =  os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+        groups_icon = file.read()
+        
     # Creating a Dictionary for my Countries Flags:
     data = {
         'Country': ['South Africa', 'Zimbabwe','Mozambique', 'Tanzania','Kenya','Zambia','Malawi'],

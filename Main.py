@@ -24,9 +24,9 @@ import base64
 from io import BytesIO
 from streamlit_option_menu import option_menu
 import warnings
-from io import StringIO
+#from io import StringIO
 import os
-from urllib.parse import urlparse
+#from urllib.parse import urlparse
 warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
@@ -358,21 +358,21 @@ def ITSM_Incident_Portal():
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
     #@st.cache_data
-    #loc= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-    #data = pd.read_csv(loc, encoding='ISO-8859-1')
+    loc= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
+    data = pd.read_csv(loc, encoding='ISO-8859-1')
     
     # Additional Files: 
-    #InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-    #InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+    InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
+    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
 
-    #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-    #Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+    Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
+    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
 
-    #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-    #OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+    OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
+    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
 
-    #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    #New = pd.read_csv(New, encoding='ISO-8859-1')
+    New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
+    New = pd.read_csv(New, encoding='ISO-8859-1')
     
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',

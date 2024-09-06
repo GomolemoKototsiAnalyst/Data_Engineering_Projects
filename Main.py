@@ -30,12 +30,12 @@ import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
-#loc_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
-#InProgress = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
-#Resolved = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
-#OnHold = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
-#New = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
-#locate = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+loc_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+InProgress = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
+Resolved = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+OnHold = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
+New = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
+locate = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
 
 #data = pd.read_csv(loc_path, encoding='ISO-8859-1')
 #InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
@@ -56,10 +56,10 @@ warnings.simplefilter(action='ignore', category=Warning)
 #Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
 
 #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-#OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+OnHold = pd.read_csv(OnHold, encoding='ISO)
 
 #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-#New = pd.read_csv(New, encoding='ISO-8859-1')
+New = pd.read_csv(New)
 
 #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
 

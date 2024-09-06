@@ -1267,23 +1267,23 @@ def Testing_Thoughts():
     import base64
     import plotly.graph_objects as go
     import matplotlib.pyplot as plt
+
+    #Importing data into my main: 
+    url1 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
+    url2 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+    url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    url4=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
+    url5=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
+    url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+    url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
+    
+    New = read_csv_from_url(url1)
+    Resolved = read_csv_from_url(url2)
+    OnHold = read_csv_from_url(url4)
+    InProgress = read_csv_from_url(url5)
+    data1 = read_csv_from_url(url3)
+    endusers_list = read_csv_from_url(url6)
   
-    #Data Source Import: 
-    loc1= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-    data1 = pd.read_csv(loc1, encoding='ISO-8859-1')
-    
-    InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
-
-    Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
-
-    OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
-
-    New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    New = pd.read_csv(New, encoding='ISO-8859-1')
-    
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
@@ -1304,8 +1304,8 @@ def Testing_Thoughts():
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
     
     # Employees ServiceNow location update: 
-    locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
+    #locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
+    #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
     
     # Handle duplicates in df1 by keeping the first occurrence
     endusers_list = endusers_list.drop_duplicates(subset='name', keep='first') 
@@ -1473,9 +1473,11 @@ def Testing_Thoughts():
         return f"data:image/svg+xml;base64,{encoded}"
     
     
-    # Path to your local SVG file: 
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/report_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
-    local_breach = 'C:/Users/Gomolemo.Kototsi/Downloads/new_releases_53dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+    # Path to your local SVG file:
+    #vg_progress_path =  os.path.join('Images', 'new_releases_53dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    #svg_progress = encode_image(svg_progress_path)
+    local_svg_path = os.path.join('Images', 'report_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    local_breach = os.path.join('Images', 'new_releases_53dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     
     # Converting the image to an SVG icon: 
     icon_testing = encode_image(local_svg_path)

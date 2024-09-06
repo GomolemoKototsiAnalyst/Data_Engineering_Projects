@@ -2036,7 +2036,7 @@ def get_resized_icon(image_path, width):
         img_str = base64.b64encode(buffered.getvalue()).decode()
         return img_str
     except FileNotFoundError:
-        print(f"File not found: {image_path"}
+        print(f"File not found: {image_path}")
         return None
 
 # Load icons:

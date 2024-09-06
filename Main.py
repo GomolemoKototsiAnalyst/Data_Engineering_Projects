@@ -307,7 +307,10 @@ def ITSM_Incident_Portal():
         with open(image_file, 'rb') as f:
             encoded = base64.b64encode(f.read()).decode()
         return f"data:image/svg+xml;base64,{encoded}"
-    data = pd.read_csv(loc_path)
+    
+    
+    
+    #data = pd.read_csv(loc_path)
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
     #@st.cache_data

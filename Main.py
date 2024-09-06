@@ -187,7 +187,9 @@ def intro():
     col1, col2 = st.columns([1,2])
     with col1:
         #st.markdown("Gomolemo Kototsi",unsafe_allow_html=True)
-        st.image('C:/Users/Gomolemo.Kototsi/Downloads/IMG_20211108_144305_755.webp', width=600)
+        Gomolemo_path = os.path.join('Images', 'IMG_20211108_144305_755.webp')
+        st.image(Gomolemo_path, width=600)
+        #st.image('C:/Users/Gomolemo.Kototsi/Downloads/IMG_20211108_144305_755.webp', width=600)
     with col2:
         # Add a description on the right side:
         st.markdown(

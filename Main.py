@@ -307,29 +307,45 @@ def ITSM_Incident_Portal():
         with open(image_file, 'rb') as f:
             encoded = base64.b64encode(f.read()).decode()
         return f"data:image/svg+xml;base64,{encoded}"
+
+    #Importing data into my system: Avoiding instances where my excel file is has str headers: 
+    def read_csv_from_url(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
+        try:
+            response = requests.get(url)
+            response.raise_for_status() 
+           
+            csv_text = StringIO(response.text)  
+           
+            data = pd.read_csv(csv_text, encoding=encoding)
+            return data
+        except requests.exceptions.RequestException as e:
+            print(f"An error occurred while fetching the CSV file from {url}: {e}")
+        except pd.errors.EmptyDataError:
+            print(f"No data found in the CSV file at {url}.")
+        except pd.errors.ParserError:
+            print(f"Error parsing the CSV file at {url}.")
+        except Exception as e:
+            print(f"An error occurred while reading the CSV file at {url}: {e}")
+        return pd.DataFrame() 
     
-    
-    
-    #data = pd.read_csv(loc_path)
+    #Importing data into my main: 
+    url1 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
+    url2 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+    url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    url4=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
+    url5=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
+    url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+    url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
+    New = read_csv_from_url(url1)
+    Resolved = read_csv_from_url(url2)
+    OnHold = read_csv_from_url(url4)
+    InProgress = read_csv_from_url(url5)
+    data = read_csv_from_url(url3)
+    endusers_list = read_csv_from_url(url3)
+
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
     #@st.cache_data
-    loc= "Raw data/incident.csv"
-    data = pd.read_csv(loc, encoding='ISO-8859-1')
-    
-    # Additional Files: 
-    InProgress= "Raw data/InProgress.csv"
-    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
-
-    Resolved= "Raw data/Resolved.csv"
-    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
-
-    OnHold= "Raw data/OnHold.csv"
-    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
-
-    #New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    New = pd.read_csv('Raw data/New.csv', encoding='ISO-8859-1')
-    
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
@@ -353,8 +369,8 @@ def ITSM_Incident_Portal():
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
     # Employees ServiceNow location update: 
-    locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
+    #locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
+    #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
     
     # Handle duplicates in df1 by keeping the first occurrence
     endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')

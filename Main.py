@@ -431,7 +431,9 @@ def ITSM_Incident_Portal():
     # Start Building a Board:
     with st.sidebar:
         st.markdown("<h2 style='text-align: left;'>Regional Service Group Analysis</h2>", unsafe_allow_html=True)
-        st.image("C:/Users/Gomolemo.Kototsi/Downloads/logo-c-fc-steinweg2x.png", use_column_width=True)  
+        bridge_path = os.path.join('Images', 'logo-c-fc-steinweg2x.png')
+        #st.image(Gomolemo_path, width=600)
+        st.image(bridge_path, use_column_width=True)  
     
         # Initial selection summary:
         if st.checkbox("ALL IT PERSONNEL", value=True):
@@ -1438,7 +1440,10 @@ def Testing_Thoughts():
     # Creating a Sidebar for the New Page: 
     with st.sidebar:
         #st.markdown("<h3 style='text-align: left;'>SLA FILTERI</h3>", unsafe_allow_html=True)
-        st.image("C:/Users/Gomolemo.Kototsi/Downloads/logo-c-fc-steinweg2x.png", use_column_width=True)  # Insert your image here
+        bridge_path = os.path.join('Images', 'logo-c-fc-steinweg2x.png')
+        #st.image(Gomolemo_path, width=600)
+        st.image(bridge_path, use_column_width=True)  
+        #st.image("C:/Users/Gomolemo.Kototsi/Downloads/logo-c-fc-steinweg2x.png", use_column_width=True)  # Insert your image here
         # Initial selection summary:
         if st.checkbox("Select All Months", value=True):
             selected_month = sorted(clean_df["Month"].unique())

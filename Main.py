@@ -559,14 +559,14 @@ def ITSM_Incident_Portal():
         if required_states is None:
             required_states = ['In Progress', 'New', 'On Hold', 'Canceled','Resolved']
             
-        # Check for missing states and add them with a count of zero    
-        for state in required_states:
-            if state not in df['State'].values:
-                df = df.append({'State': state, 'Count': 0}, ignore_index=True)          
+        # Create a DataFrame for missing states with a count of 0
+        missing_states = [{'State': state, 'Count': 0} for state in required_states if state not in df['State'].values]
+    
+        if missing_states:
+            missing_states_df = pd.DataFrame(missing_states)
+            # Use pd.concat to add missing states to the original DataFrame
+            df = pd.concat([df, missing_states_df], ignore_index=True)
         return df
-    
-    
-    
     #Creating a useable dataframe: 
     filtered_category_totals = ensure_all_states(filtered_category_totals,selected_status)
 

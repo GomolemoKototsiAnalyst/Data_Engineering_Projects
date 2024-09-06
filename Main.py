@@ -24,6 +24,8 @@ import base64
 from io import BytesIO
 from streamlit_option_menu import option_menu
 import warnings
+import requests
+from io import StringIO
 #from io import StringIO
 import os
 #from urllib.parse import urlparse
@@ -298,6 +300,8 @@ def ITSM_Incident_Portal():
     import folium
     import matplotlib.pyplot as plt
     import base64
+    import requests
+    from io import StringIO
 
     #st.markdown("Regional Service Group Analysis")   
     #st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')

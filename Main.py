@@ -2027,13 +2027,17 @@ def SteinTech():
     
 # Function to resize icons and convert to base64
 def get_resized_icon(image_path, width):
-    img = Image.open(image_path)
-    aspect_ratio = img.height / img.width
-    resized_img = img.resize((width, int(width * aspect_ratio)))
-    buffered = BytesIO()
-    resized_img.save(buffered, format="PNG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
-    return img_str
+    try:
+        img = Image.open(image_path)
+        aspect_ratio = img.height / img.width
+        resized_img = img.resize((width, int(width * aspect_ratio)))
+        buffered = BytesIO()
+        resized_img.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue()).decode()
+        return img_str
+    except FileNotFoundError:
+        print(f"File not found: {image_path"}
+        return None
 
 # Load icons:
 home_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)

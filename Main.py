@@ -1945,7 +1945,9 @@ def Information_Portal():
     """)
     # Display image from local file
     # Method 1: Using st.image with a URL
-    svg_url = 'C:/Users/Gomolemo.Kototsi/Downloads/Architectural Design Map.svg'
+    #os.path.join('Images', 'Architectural Design Map.svg')
+
+    svg_url = os.path.join('Images', 'Architectural Design Map.svg')
     st.image(svg_url, caption='Architectural Data Design for the Dashboard', use_column_width=True)
     st.markdown(
         """
@@ -1965,10 +1967,12 @@ def Information_Portal():
         ###### SLA compliance Reporting:
     """)
 
-    image_first = 'C:/Users/Gomolemo.Kototsi/Downloads/Regional_analysis diagram configuration.png'   
-    image_second = 'C:/Users/Gomolemo.Kototsi/Downloads/Compliance_architects explaination.png'  
+    image_first =  os.path.join('Images', 'Regional_analysis diagram configuration.png')
+    image_second = os.path.join('Images', 'Compliance_architects explaination.png') 
     
     ### Work Accrual Board
+    #os.path.join('Images', 'Regional_analysis diagram configuration.png')
+    #os.path.join('Images', 'Compliance_architects explaination.png')
     image_a = Image.open(image_first)
     image_b = Image.open(image_second)
     

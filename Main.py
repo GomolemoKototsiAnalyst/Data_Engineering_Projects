@@ -30,7 +30,7 @@ warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
 
-loc_path = os.path.join('Raw data/incident.csv')
+loc_path = './Raw data/incident.csv'
 InProgress = os.path.join('Raw data/InProgress.csv')
 Resolved = os.path.join('Raw data/Resolved.csv')
 OnHold = os.path.join('Raw data/OnHold.csv')

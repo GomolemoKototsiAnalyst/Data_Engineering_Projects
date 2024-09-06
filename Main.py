@@ -1267,7 +1267,34 @@ def Testing_Thoughts():
     import base64
     import plotly.graph_objects as go
     import matplotlib.pyplot as plt
+    from PIL import Image
+    import matplotlib.pyplot as plt
+    import base64
+    import requests
+    from io import StringIO
 
+
+    #Importing data into my system: Avoiding instances where my excel file is has str headers: 
+    def read_csv_from_url(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
+        try:
+            response = requests.get(url)
+            response.raise_for_status() 
+           
+            csv_text = StringIO(response.text)  
+           
+            data = pd.read_csv(csv_text, encoding=encoding)
+            return data
+        except requests.exceptions.RequestException as e:
+            print(f"An error occurred while fetching the CSV file from {url}: {e}")
+        except pd.errors.EmptyDataError:
+            print(f"No data found in the CSV file at {url}.")
+        except pd.errors.ParserError:
+            print(f"Error parsing the CSV file at {url}.")
+        except Exception as e:
+            print(f"An error occurred while reading the CSV file at {url}: {e}")
+        return pd.DataFrame() 
+
+        
     #Importing data into my main: 
     url1 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
     url2 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'

@@ -29,14 +29,18 @@ import os
 warnings.simplefilter(action='ignore', category=Warning)
 
 # getting the data into the mmain: 
-
 loc_path = './Raw data/incident.csv'
-InProgress = os.path.join('Raw data/InProgress.csv')
-Resolved = os.path.join('Raw data/Resolved.csv')
-OnHold = os.path.join('Raw data/OnHold.csv')
-New = os.path.join('Raw data/New.csv')
-locate = os.path.join('Raw data/sys_user.csv')
-
+InProgress = './Raw data/InProgress.csv'
+Resolved = './Raw data/Resolved.csv'
+OnHold = './Raw data/OnHold.csv'
+New = './Raw data/New.csv'
+locate = './Raw data/sys_user.csv'
+data = pd.read_csv(loc_path, encoding='ISO-8859-1')
+InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+New = pd.read_csv(New, encoding='ISO-8859-1')
+endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
 #loc_path = os.path.join('Raw data/incident.csv')
 #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
 #@st.cache_data
@@ -334,6 +338,20 @@ def ITSM_Incident_Portal():
         with open(image_file, 'rb') as f:
             encoded = base64.b64encode(f.read()).decode()
         return f"data:image/svg+xml;base64,{encoded}"
+
+    # getting the data into the mmain: 
+    loc_path = './Raw data/incident.csv'
+    InProgress = './Raw data/InProgress.csv'
+    Resolved = './Raw data/Resolved.csv'
+    OnHold = './Raw data/OnHold.csv'
+    New = './Raw data/New.csv'
+    locate = './Raw data/sys_user.csv'
+    data = pd.read_csv(loc_path, encoding='ISO-8859-1')
+    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
+    New = pd.read_csv(New, encoding='ISO-8859-1')
+    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
     #@st.cache_data
@@ -345,7 +363,7 @@ def ITSM_Incident_Portal():
     #InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
 
     #Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-   #Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
+    #Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
 
     #OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
     #OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')

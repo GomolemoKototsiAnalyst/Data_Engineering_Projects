@@ -429,7 +429,7 @@ def ITSM_Incident_Portal():
     #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
     
     # Handle duplicates in df1 by keeping the first occurrence
-    endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
+    endusers_list = endusers_list.drop_duplicates(subset='Name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
@@ -438,17 +438,12 @@ def ITSM_Incident_Portal():
 
     df['Assigned to'] = df['Assigned to'].replace('nan', 'System')
 
-    #Creating a time difference variable to calculate SLA Compliance:
     def calculate_sla(row, start_col, end_col, date_format='%Y-%m-%d %H:%M:%S'):
-        #df['Updated'] = pd.to_datetime(df['Updated'], format="%d/%m/%Y %H:%M:%S")
-        #df['Due date'] = pd.to_datetime(df['Due date'], format="%d/%m/%Y %H:%M:%S")
-        #pd.to_datetime(df["date"], format='mixed', dayfirst=True)
-        hours = 0  # Initialize hours with a default value
         # Convert the strings to datetime objects
         start_dt = row[start_col]
         end_dt = row[end_col]
     
-        ## I have noticed that when I am trying to get the difference of time in hours I am getting an error because the date time column is not
+        # # I have noticed that when I am trying to get the difference of time in hours I am getting an error because the date time column is not
         # passed the correct way so I need to force it 
         if not isinstance(start_dt, datetime):
             start_dt = pd.to_datetime(start_dt)
@@ -461,7 +456,7 @@ def ITSM_Incident_Portal():
             hours = delta.seconds / 3600  # hours
             return f"{hours} hours"
     
-        # Calculate the difference excluding weekends: I dont want my weekends to be added to the calculation of the SLA:
+        # Calculate the difference excluding weekends: I dont want my weekends to be added to the calculation of the SLA
         total_days = 0
         current_dt = start_dt
     
@@ -477,6 +472,7 @@ def ITSM_Incident_Portal():
     
         return f"{total_days} days"
 
+    
     def calculate_timetaken_for_ticketcompletion(df, start_col, end_col,date_format='%Y-%m-%d %H:%M:%S'):
         return df.apply(calculate_sla, axis=1, start_col=start_col, end_col=end_col, date_format=date_format)
 
@@ -488,9 +484,7 @@ def ITSM_Incident_Portal():
     df['Updated']= pd.to_datetime(df['Updated'], errors='coerce')
     df['Year'] = df['Updated'].dt.year
     df['Year'] = df['Year'].astype(str)
-
-    
-    # Calculate time differences in hours:() / 
+    # Calculate time differences in hours:() 
     df['time_difference_testing'] = (df['Updated'] - df['Due date']).dt.total_seconds() / 3600
 
     # Categorize the time differences:

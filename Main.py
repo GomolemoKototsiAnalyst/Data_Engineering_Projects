@@ -428,7 +428,11 @@ def ITSM_Incident_Portal():
     #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
     response = requests.get(url6)
     content = response.content.decode('ISO-8859-1', errors='ignore')  # or errors='ignore'
-    endusers_list = pd.read_csv(StringIO(content))
+    try:
+        endusers_list = pd.read_csv(StringIO(content))
+    except Exception as e:
+        print(f"Error reading CSV data: {e}")
+        
     # Handle duplicates in df1 by keeping the first occurrence
     endusers_list = endusers_list.drop_duplicates(subset='Name', keep='first')
     

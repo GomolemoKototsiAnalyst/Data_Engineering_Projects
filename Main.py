@@ -423,20 +423,14 @@ def ITSM_Incident_Portal():
     #ETL Process to create multiple data marts:: 
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
-    # Employees ServiceNow location update:
-    from io import StringIO
     #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
     response = requests.get(url6)
-    content = response.content.decode('ISO-8859-1', errors='ignore')  # or errors='ignore'
-    try:
-        endusers_list = pd.read_csv(StringIO(content))
-        endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
-    except Exception as e:
-        print(f"Error reading CSV data: {e}")
-        
-    # Handle duplicates in df1 by keeping the first occurrence
+    content = response.content.decode('ISO-8859-1', errors='ignore')
+    # Employees ServiceNow location update:
+    from io import StringIO
+    import requests
+    endusers_list = pd.read_csv(StringIO(content))
     #endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
-    
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
 

@@ -364,11 +364,11 @@ def ITSM_Incident_Portal():
     
     #Importing data into my main: 
     url1 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
-    url2 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+    url2 =  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Resolved.csv'
     url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
-    url4=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
-    url5=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
-    url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+    url4=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/OnHold.csv'
+    url5=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/InProgress.csv'
+    url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
     url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
     New = read_csv_from_url(url1)
     Resolved = read_csv_from_url(url2)

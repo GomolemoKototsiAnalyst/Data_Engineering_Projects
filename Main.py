@@ -430,11 +430,12 @@ def ITSM_Incident_Portal():
     content = response.content.decode('ISO-8859-1', errors='ignore')  # or errors='ignore'
     try:
         endusers_list = pd.read_csv(StringIO(content))
+        endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     except Exception as e:
         print(f"Error reading CSV data: {e}")
         
     # Handle duplicates in df1 by keeping the first occurrence
-    endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
+    #endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])

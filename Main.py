@@ -318,6 +318,7 @@ def ITSM_Incident_Portal():
     import base64
     import requests
     from io import StringIO
+    from io import BytesIO
 
 
     def get_resized_icon(image_path, width):
@@ -425,11 +426,11 @@ def ITSM_Incident_Portal():
     
     #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
     response = requests.get(url6)
-    content = response.content.decode('ISO-8859-1', errors='ignore')
+    #content = response.content.decode('ISO-8859-1', errors='ignore')
     # Employees ServiceNow location update:
     from io import StringIO
     import requests
-    endusers_list = pd.read_csv(StringIO(content), error_bad_lines=False, warn_bad_lines=True)
+    endusers_list = pd.read_csv(BytesIO(response.content), encoding='ISO-8859-1')
     #endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'

@@ -377,7 +377,7 @@ def ITSM_Incident_Portal():
     if csv_url:
         try:
             #df = pd.read_csv(csv_url)
-            data = pd.read_csv(csv_url)
+            data = pd.read_csv(csv_url,encoding='ISO-8859-1')
             st.write("File loaded successfully from URL!")
             st.write(df.head())  # Display the first few rows of the DataFrame
         except Exception as e:

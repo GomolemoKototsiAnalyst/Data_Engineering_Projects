@@ -365,16 +365,29 @@ def ITSM_Incident_Portal():
     #Importing data into my main: 
     url1 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
     url2 =  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Resolved.csv'
-    url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    #url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
     url4=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/OnHold.csv'
     url5=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/InProgress.csv'
     url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
-    url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
+    #url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
+
+
+    # Enter URL of the CSV file
+    csv_url = st.text_input("Enter the CSV URL", "https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident.csv")
+    if csv_url:
+        try:
+            #df = pd.read_csv(csv_url)
+            data = pd.read_csv(csv_url)
+            st.write("File loaded successfully from URL!")
+            st.write(df.head())  # Display the first few rows of the DataFrame
+        except Exception as e:
+            st.error(f"Error reading the file from URL: {e}")
+
     New = read_csv_from_url(url1)
     Resolved = read_csv_from_url(url2)
     OnHold = read_csv_from_url(url4)
     InProgress = read_csv_from_url(url5)
-    data = read_csv_from_url(url3)
+    #data = read_csv_from_url(url3)
     endusers_list = read_csv_from_url(url6)
 
     

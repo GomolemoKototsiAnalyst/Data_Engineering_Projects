@@ -375,7 +375,6 @@ def ITSM_Incident_Portal():
     url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
     #url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
 
-
     # Enter URL of the CSV file
     New = read_csv_from_url(url1)
     Resolved = read_csv_from_url(url2)
@@ -424,10 +423,12 @@ def ITSM_Incident_Portal():
     #ETL Process to create multiple data marts:: 
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
-    # Employees ServiceNow location update: 
-    #locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
-    
+    # Employees ServiceNow location update:
+    from io import StringIO
+    #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
+    response = requests.get(url6)
+    content = response.content.decode('latin1')  
+    endusers_list = pd.read_csv(StringIO(content))
     # Handle duplicates in df1 by keeping the first occurrence
     endusers_list = endusers_list.drop_duplicates(subset='Name', keep='first')
     

@@ -365,7 +365,11 @@ def ITSM_Incident_Portal():
     #Importing data into my main: 
     url1 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
     url2 =  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Resolved.csv'
-    #url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    url3=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident.csv'
+    url_A=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Incident_A.csv'
+    url_B=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_B.csv'
+    url_C=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_C.csv'
+    url_D=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_D.csv'
     url4=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/OnHold.csv'
     url5=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/InProgress.csv'
     url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
@@ -373,21 +377,15 @@ def ITSM_Incident_Portal():
 
 
     # Enter URL of the CSV file
-    csv_url = st.text_input("Enter the CSV URL", "https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident.csv")
-    if csv_url:
-        try:
-            #df = pd.read_csv(csv_url)
-            data = pd.read_csv(csv_url,encoding='ISO-8859-1')
-            st.write("File loaded successfully from URL!")
-            st.write(df.head())  # Display the first few rows of the DataFrame
-        except Exception as e:
-            st.error(f"Error reading the file from URL: {e}")
-
     New = read_csv_from_url(url1)
     Resolved = read_csv_from_url(url2)
     OnHold = read_csv_from_url(url4)
     InProgress = read_csv_from_url(url5)
-    #data = read_csv_from_url(url3)
+    data = read_csv_from_url(url3)
+    dataA = read_csv_from_url(url_A)
+    dataB= read_csv_from_url(url_B)
+    dataC = read_csv_from_url(url_C)
+    dataD = read_csv_from_url(url_D)
     endusers_list = read_csv_from_url(url6)
 
     
@@ -409,8 +407,19 @@ def ITSM_Incident_Portal():
     data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
 
+    data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataA.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataB.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataC.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataD.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+   
     #Working Merged Dataframe: 
-    df_merged= pd.concat([data, InProgress, OnHold, New, Resolved], ignore_index=True)
+    df_merged= pd.concat([data,dataA,dataB,dataC,dataD, InProgress, OnHold, New, Resolved], ignore_index=True)
 
     #ETL Process to create multiple data marts:: 
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
@@ -1311,7 +1320,11 @@ def Testing_Thoughts():
     #Importing data into my main: 
     url1 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
     url2 = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
-    url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    url3=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident.csv'
+    url_A=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Incident_A.csv'
+    url_B=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_B.csv'
+    url_C=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_C.csv'
+    url_D=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_D.csv'
     url4=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
     url5=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
     url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
@@ -1322,6 +1335,10 @@ def Testing_Thoughts():
     OnHold = read_csv_from_url(url4)
     InProgress = read_csv_from_url(url5)
     data1 = read_csv_from_url(url3)
+    dataA = read_csv_from_url(url_A)
+    dataB= read_csv_from_url(url_B)
+    dataC = read_csv_from_url(url_C)
+    dataD = read_csv_from_url(url_D)
     endusers_list = read_csv_from_url(url6)
   
     #Renaming the columns for a unilateral intake:
@@ -1342,7 +1359,15 @@ def Testing_Thoughts():
     
     data1.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
-    
+    dataA.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataB.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataC.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataD.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+   
     # Employees ServiceNow location update: 
     #locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
     #endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
@@ -1351,7 +1376,7 @@ def Testing_Thoughts():
     endusers_list = endusers_list.drop_duplicates(subset='name', keep='first') 
     
     #ETL Process:
-    df_merged= pd.concat([data1, InProgress, OnHold, New, Resolved], ignore_index=True)
+    df_merged= pd.concat([dataA, dataB, dataC, dataD, data1, InProgress, OnHold, New, Resolved], ignore_index=True)
                          
     df_merged.loc[df_merged['State'] == 'Closed', 'State'] = 'Resolved'
                          

@@ -429,8 +429,9 @@ def ITSM_Incident_Portal():
     # Employees ServiceNow location update:
     from io import StringIO
     import requests
-    endusers_list = pd.read_csv(StringIO(content))
+    endusers_list = pd.read_csv(StringIO(content),low_memory=False)
     #endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
+    
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
 

@@ -403,8 +403,8 @@ def ITSM_Incident_Portal():
     New.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
 
-    data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
-       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    #data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+     #  'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
 
     data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)

@@ -346,14 +346,14 @@ def ITSM_Incident_Portal():
         return f"data:image/svg+xml;base64,{encoded}"
 
     #Importing data into my system: Avoiding instances where my excel file is has str headers: 
-    def read_csv_from_url(url: str, encode='') -> pd.DataFrame:
+    def read_csv_from_url(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
         try:
             response = requests.get(url)
             response.raise_for_status() 
            
             csv_text = StringIO(response.text)  
            
-            data = pd.read_csv(csv_text, sep=',')
+            data = pd.read_csv(csv_text, encoding=encoding)
             return data
         except requests.exceptions.RequestException as e:
             print(f"An error occurred while fetching the CSV file from {url}: {e}")

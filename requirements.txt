@@ -2,7 +2,7 @@ altair==5.4.1
 folium==0.17.0
 matplotlib==3.9.2
 numpy==2.1.1
-pandas==2.2.2
+pandas==1.5.3
 Pillow==10.4.0
 plotly==5.23.0
 Requests==2.32.3

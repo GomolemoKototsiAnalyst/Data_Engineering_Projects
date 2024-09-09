@@ -367,14 +367,14 @@ def ITSM_Incident_Portal():
     
     #Importing data into my main: 
     url1 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv'
-    url2 =  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Resolved.csv'
-    url3=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident.csv'
-    url_A=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/Incident_A.csv'
-    url_B=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_B.csv'
-    url_C=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_C.csv'
-    url_D=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_D.csv'
-    url4=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/OnHold.csv'
-    url5=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/InProgress.csv'
+    url2 =  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv'
+    url3=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv'
+    url_A=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Incident_A.csv'
+    url_B=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_B.csv'
+    url_C=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_C.csv'
+    url_D=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_D.csv'
+    url4=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold.csv'
+    url5=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv'
     url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
     #url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
 

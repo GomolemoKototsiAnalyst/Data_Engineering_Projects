@@ -375,8 +375,19 @@ def ITSM_Incident_Portal():
     url_D=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/incident_D.csv'
     url4=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/OnHold.csv'
     url5=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/InProgress.csv'
-    url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
+    url6=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
     #url7=  'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.xlsx'
+
+
+    # Enter URL of the CSV file
+    csv_url = st.text_input("Enter the CSV URL", "https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv")
+
+    if csv_url:
+        try:
+            endusers_list = pd.read_csv(csv_url)
+        except Exception as e:
+            st.error(f"Error reading the file from URL: {e}")
+
 
     # Enter URL of the CSV file
     New = read_csv_from_url(url1)
@@ -388,7 +399,7 @@ def ITSM_Incident_Portal():
     dataB= read_csv_from_url(url_B)
     dataC = read_csv_from_url(url_C)
     dataD = read_csv_from_url(url_D)
-    endusers_list = read_csv_from_url(url6)
+    #endusers_list = read_csv_from_url(url6)
 
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:

@@ -344,14 +344,14 @@ def ITSM_Incident_Portal():
         return f"data:image/svg+xml;base64,{encoded}"
 
     #Importing data into my system: Avoiding instances where my excel file is has str headers: 
-    def read_csv_from_url(url: str, encoding='ISO-8859-1') -> pd.DataFrame:
+    def read_csv_from_url(url: str, sep=',') -> pd.DataFrame:
         try:
             response = requests.get(url)
             response.raise_for_status() 
            
             csv_text = StringIO(response.text)  
            
-            data = pd.read_csv(csv_text, encoding=encoding)
+            data = pd.read_csv(csv_text, sep=',')
             return data
         except requests.exceptions.RequestException as e:
             print(f"An error occurred while fetching the CSV file from {url}: {e}")
@@ -390,7 +390,6 @@ def ITSM_Incident_Portal():
 
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
-    #@st.cache_data
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)

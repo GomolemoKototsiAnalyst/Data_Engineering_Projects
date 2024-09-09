@@ -425,14 +425,8 @@ def ITSM_Incident_Portal():
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
     #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
-    #response = requests.get(url6)
-    #content = response.content.decode('ISO-8859-1', errors='ignore')
-    # Employees ServiceNow location update:
-    #from io import StringIO
-    #import requests
-    #esponse = requests.get(url6)
-    #endusers_list = pd.read_json(BytesIO(response.content), encoding='ISO-8859-1')
-    #endusers_list = pd.read_json(response.text), lines=True)
+    endusers_list.rename(columns={'name': 'name'}, inplace=True)
+    endusers_list.columns = endusers_list.columns.str.strip()
     endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'

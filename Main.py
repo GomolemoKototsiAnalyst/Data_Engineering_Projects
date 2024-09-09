@@ -386,7 +386,7 @@ def ITSM_Incident_Portal():
     dataB= read_csv_from_url(url_B)
     dataC = read_csv_from_url(url_C)
     dataD = read_csv_from_url(url_D)
-    #endusers_list = read_csv_from_url(url6)
+    endusers_list = read_csv_from_url(url6)
 
     
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
@@ -425,13 +425,15 @@ def ITSM_Incident_Portal():
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
     #url6=  'https://github.com/GomolemoKototsiAnalyst/DataHub-App/blob/main/Raw%20data/sys_user.csv'
-    response = requests.get(url6)
+    #response = requests.get(url6)
     #content = response.content.decode('ISO-8859-1', errors='ignore')
     # Employees ServiceNow location update:
-    from io import StringIO
-    import requests
-    endusers_list = pd.read_csv(BytesIO(response.content), encoding='ISO-8859-1')
-    #endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
+    #from io import StringIO
+    #import requests
+    #esponse = requests.get(url6)
+    #endusers_list = pd.read_json(BytesIO(response.content), encoding='ISO-8859-1')
+    #endusers_list = pd.read_json(response.text), lines=True)
+    endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])

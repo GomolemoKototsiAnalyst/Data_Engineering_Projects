@@ -1,0 +1,279 @@
+number,due_date,short_description,caller_id,priority,state,category,assignment_group,assigned_to,sys_updated_on,sys_updated_by,u_service_offering_subcategory,active
+INC0067853,28/06/2023 11:04:50,Kapotte Dell Tablet.,Julien de Lange,5 - Very Low,In Progress,Hardware,Operations,Kevin Boerman,29/07/2024 16:23:20,jstar,,TRUE
+INC0069977,11/07/2023 12:10:36,Outlook closes after entering an email address she hasn't used before or in a long time,Wanda Fokkelman - Sluis,5 - Very Low,In Progress,Software,Operations,Eric Bastiaan Net,29/07/2024 15:50:46,jstar,,TRUE
+INC0083533,24/11/2023 14:25:56,BRIDGE 4 MAIN WAREHOUSE NETWORK,Ashley Els,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,15/11/2023 16:15:37,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0085757,12/12/2023 10:39:07,FW: Please Quote - URGENT REQUEST,Loni Shott,5 - Very Low,In Progress,,ZA - OVB Techs,Soheil Monteiro,12/06/2024 10:19:20,jstar,Firewall Issues,TRUE
+INC0086562,22/12/2023 17:44:59,"egoud can't  print a full cargo plan from within SVM Baplie viewer, his colleague can",Erik Goudzwaard,5 - Very Low,In Progress,,Operations,Weis Mateen,16/07/2024 13:56:03,wmate,,TRUE
+INC0087386,20/12/2023 15:30:08,200+ emails received from noreply@academy.steinweg.com,Shabir Saib,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,12/12/2023 09:54:30,Calin.Legwale@za.steinweg.com,,TRUE
+INC0087603,19/12/2023 09:31:14,Diakrieten in Fiton - kan de omgedraaide vraagteken vervangen worden door een andere/juiste teken of eventueel weglaten als het teken niet bestaat,Joery van Dillen,5 - Very Low,In Progress,,Tibco / Middleware,Erwin Fok,11/07/2024 14:50:50,jstar,,TRUE
+INC0090075,03/01/2024 17:29:40,DNA3351: Unikiep doesn't connect to service Connected to 0,Andrew van Elteren,3 - Moderate,In Progress,,Operations,Tim Versteeg,07/08/2024 16:35:52,tvers,,TRUE
+INC0090441,05/01/2024 12:32:22,Pier 2 uniwin can not weigh automaticly gets error message. DNA5231,Ronald van der Goes,3 - Moderate,In Progress,,Operations,Tim Versteeg,08/08/2024 13:13:41,tvers,,TRUE
+INC0093872,30/01/2024 14:01:02,FW: Incident ticket  INC0093745 ATG link blocked has been resolved,Malcolm Porter,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,19/01/2024 14:20:29,Calin.Legwale@za.steinweg.com,,TRUE
+INC0094299,25/01/2024 10:17:18,"Almost everyday when i am working in an email \ create email and want to sent it, i get the error ""bewering is mislukt"".",Linda Tamaela,5 - Very Low,In Progress,,Operations,Eric Bastiaan Net,29/07/2024 15:42:49,jstar,,TRUE
+INC0095032,26/01/2024 14:09:44,Cannot receive any emails from gmail addresses.,Olivier Werbrouck,2 - High,In Progress,,Management Escalation,Stephan Steenkamp,11/07/2024 12:09:52,stste,,TRUE
+INC0098584,21/02/2024 11:50:54,BOS DBN Container Yard - Trans-Med Shipping (Pty) Ltd,Venice Theunisen,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,12/02/2024 12:09:29,Calin.Legwale@za.steinweg.com,,TRUE
+INC0098610,21/02/2024 12:07:35,BOS DBN - Countainer Yard & Warehouse:  South African Inland Logistics CC,Venice Theunisen,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,12/02/2024 12:08:00,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0099780,16/02/2024 16:20:44,Unable to login to dekla history,Hans Vermeegen,5 - Very Low,In Progress,,Operations,Tim Versteeg,05/07/2024 13:00:25,jstar,,TRUE
+INC0099910,27/02/2024 18:00:00,ISO Group not filled in after creating a booking,Leon Steer,5 - Very Low,In Progress,,Oman - Applications Team,Hajar Rashid Al Mamari,22/07/2024 09:29:15,hpoel,,TRUE
+INC0099970,28/02/2024 09:34:34,CPT cameras off since 29 December 2023,Malcolm Porter,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,06/06/2024 10:51:58,nnjom,,TRUE
+INC0100940,22/02/2024 13:49:26,Automation of Monthly Weighbridge Comparison,Marilen Yap,3 - Moderate,In Progress,,Oman - Applications Team,Aaisha Ali Said Al Hattali,12/06/2024 09:00:40,aasal,,TRUE
+INC0100995,22/02/2024 15:15:53,Automation of Voyage Checklist Report,Marilen Yap,3 - Moderate,In Progress,,Oman - Applications Team,Hans Poels,15/05/2024 09:14:25,hpoel,,TRUE
+INC0101427,06/03/2024 09:53:30,BOS OVB,Sthembiso Ndhlovu,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,26/02/2024 09:53:54,Gomolemo.Kototsi@za.steinweg.com,Security Profile,TRUE
+INC0102662,11/03/2024 18:00:00,FIBRE DOWN - CAPE TOWN - URGENT,Chizelle Perry,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,01/03/2024 11:32:07,erabo,,TRUE
+INC0103851,14/03/2024 18:00:00,New User Form,Soheil Monteiro,5 - Very Low,In Progress,,ZA - OVB Techs,Soheil Monteiro,08/03/2024 13:06:44,Clement.Mashala@za.steinweg.com,Application Installation,TRUE
+INC0104344,18/03/2024 12:14:40,Nabila 8 cameras offline Switch issue,Shirwin Devan,5 - Very Low,In Progress,,ZA - OVB Techs,Soheil Monteiro,11/03/2024 14:12:20,nnjom,,TRUE
+INC0105704,22/03/2024 12:06:46,FW: Domain and Hosting Renewal - consolidated.co.ke,Sassen Oluoch Ogutu,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,14/03/2024 12:03:12,erabo,Firewall Issues,TRUE
+INC0106178,21/03/2024 15:30:00,SSL certificate expires in 29 days for b2btest.steinwegportal,Maik Nissen,5 - Very Low,In Progress,,Tibco / Middleware,Erwin Fok,23/05/2024 06:23:49,mniss,,TRUE
+INC0106777,27/03/2024 14:21:22,KOM BACK UP ROOTER.,Isma Mhlongo,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,18/03/2024 15:20:09,Clement.Mashala@za.steinweg.com,,TRUE
+INC0110879,12/04/2024 08:38:38,FW: 3 emails with invoices + pods /rejected,Brett Read,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,03/04/2024 08:39:32,Calin.Legwale@za.steinweg.com,Firewall Issues,TRUE
+INC0112030,16/04/2024 17:00:00,Al Jadeeeda (15B) Connectivity,Manal Mohammed Al Balushi,5 - Very Low,In Progress,,Oman - ICT Support,Mohd Raziuddin Rizwan,26/05/2024 08:53:21,mrr,,TRUE
+INC0112203,16/04/2024 16:44:15,"ik moet vaak inloggen in mijn Microsoft account, hoe komt dit?",Michael Kalkman,5 - Very Low,In Progress,Information Request,Operations,Khurram Qureshi,14/08/2024 13:50:51,qnove,,TRUE
+INC0112604,18/04/2024 09:42:05,Sinergi quotes,Sadiaqah Yacoob,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,26/04/2024 12:35:12,Calin.Legwale@za.steinweg.com,,TRUE
+INC0112700,16/04/2024 09:17:21,order 41964030 (uitslag) staat zowel in General als in Solar de auto's niet op geladen.,Michael Augustijn,5 - Very Low,In Progress,,TAM - Technical Application Management,Telmo Parreira,02/07/2024 13:27:38,parre,,TRUE
+INC0113133,19/04/2024 14:02:07,Quotation required,Ricky Hardie,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Peter Van Staaden,12/04/2024 11:08:28,Mayuri.Reddy@za.steinweg.com,,TRUE
+INC0114284,22/04/2024 12:32:20,I can't acces my own saved password in Google Chrome,Tessa Van T Hof,5 - Very Low,In Progress,,Infrastructure,Emilio Haddocks,22/04/2024 12:32:22,system,,TRUE
+INC0115253,29/04/2024 11:30:21,Cannot access http://10.3.1.31:82/BridgePortal/Account/SignIn.aspx,James Koch,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,18/04/2024 11:48:21,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0117364,06/05/2024 09:59:38,Jira Kanban Board permissions,Angela Coleman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,25/04/2024 10:00:19,Gomolemo.Kototsi@za.steinweg.com,Security Profile,TRUE
+INC0117507,25/04/2024 15:50:45,i cant send E-mail from the shared mailbox Feder8.,Robin Benning,5 - Very Low,In Progress,,Operations,Eric Bastiaan Net,31/07/2024 09:19:39,ericb,,TRUE
+INC0118425,06/05/2024 15:44:44,Stackport 2 status of NLRTM1-SHNCS01 is down. Location Seinehaven.,Berwa Saleh,5 - Very Low,In Progress,,Operations,Berwa Saleh,06/05/2024 15:44:47,system,,TRUE
+INC0118565,09/05/2024 14:31:27,Jira access for Mayuri Reddy,Angela Coleman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,17/05/2024 13:47:15,Gomolemo.Kototsi@za.steinweg.com,Security Profile,TRUE
+INC0120276,17/05/2024 09:11:37,Clone Bridge 11 Weigh Bridge PC - SSD,Eddie Rabotapi,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,08/05/2024 09:11:49,Calin.Legwale@za.steinweg.com,,TRUE
+INC0120604,10/05/2024 14:05:04,I cannot access the Teams group: PE ADM,Carlos Vieira,2 - High,In Progress,,Infrastructure,,07/08/2024 18:10:53,cvie,,TRUE
+INC0121684,21/05/2024 13:56:21,Request assistance for: 42555555-0,Brian de Boer,5 - Very Low,In Progress,Software,FAM HQ - Order management/Compliance/Customs/TOS,Ferry Sla,25/06/2024 10:23:53,fsla,,TRUE
+INC0123994,03/06/2024 12:24:41,printers not working,Humaid Khamis Al Maamari,5 - Very Low,In Progress,,Oman - ICT Support,Mohd Raziuddin Rizwan,15/07/2024 07:28:40,mbalu,,TRUE
+INC0124292,04/06/2024 09:00:30,Titan Container screen access,Charl Marais,5 - Very Low,In Progress,,ZA - Bridge Connect,James Koch,27/05/2024 15:28:20,Esla.Wickins@za.steinweg.com,Security Profile,TRUE
+INC0126156,05/06/2024 13:07:32,Microsoft Entra Connect Health | Sync errors,Weis Mateen,5 - Very Low,In Progress,,Infrastructure,Yassir Khamas,24/06/2024 14:03:18,ykham,,TRUE
+INC0126527,03/06/2024 13:09:55,INC | External mail not received in Inbox ,Tim Versteeg,3 - Moderate,In Progress,,Operations,Jaring Felizardo JR Sarcino,20/08/2024 10:47:57,ericb,,TRUE
+INC0126969,11/06/2024 14:58:18,Shonice Laptop,Nadia Barnard,5 - Very Low,In Progress,,ZA - Service Desk,Nathi Ndlazi,31/05/2024 14:58:34,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0127710,13/06/2024 08:37:02,Bomgar slowness issue for Asia users,Bong Chi Yik,5 - Very Low,In Progress,,Operations,Bong Chi Yik,04/06/2024 08:37:03,cybon,,TRUE
+INC0128026,11/06/2024 10:38:11,Krijgt regelmatig oude portbriefjes te zien,Ismael Groenendijk,5 - Very Low,In Progress,,TAM - Technical Application Management,Telmo Parreira,05/08/2024 10:52:52,mvmoo,,TRUE
+INC0128358,11/06/2024 14:30:00,Outlook Junk mail,Ellen van der Ham,5 - Very Low,In Progress,,Operations,Eric Bastiaan Net,07/08/2024 13:44:50,eham,,TRUE
+INC0130251,19/06/2024 08:17:02,Printer failed,Michelle Tinkhof,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,10/06/2024 09:15:32,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0130387,19/06/2024 12:04:55,FW: Auto reports - BME,Deirdre Pedersen,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,10/06/2024 12:20:17,dpede,,TRUE
+INC0131039,02/07/2024 12:30:58,Meekijken met gebruikers werkt niet,Miranda Stegers,5 - Very Low,In Progress,,Operations,Khurram Qureshi,09/08/2024 09:56:08,kqure,,TRUE
+INC0131790,24/06/2024 11:47:35,RE: KMSA,Lloyd Dlamini,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,14/06/2024 09:29:10,Calin.Legwale@za.steinweg.com,,TRUE
+INC0131794,24/06/2024 11:53:02,FW: Shipment Closure document - Limitations of authority,Maria Spyridis,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Myles Hancock,19/08/2024 09:43:04,Mayuri.Reddy@za.steinweg.com,,TRUE
+INC0132172,14/06/2024 15:13:33,Outlook werkt traag bij,Michael Kalkman,5 - Very Low,In Progress,,Infrastructure,,21/06/2024 11:39:27,system,,TRUE
+INC0132597,30/07/2024 15:19:08,Teams issues,Gabriel Roque,3 - Moderate,In Progress,,Operations,Khurram Qureshi,16/08/2024 14:00:37,groqu,,TRUE
+INC0133284,28/06/2024 10:33:01,Desk Printer - Ashgate,Sherwyn Shanmugam,5 - Very Low,In Progress,,ZA - Service Desk,Ndimphiwe Njomboni,19/06/2024 10:43:00,Calin.Legwale@za.steinweg.com,,TRUE
+INC0133705,20/06/2024 16:32:32,in Chrome moet blijven inloggen na elke actie.,Ritesh Eugene Patandin,5 - Very Low,In Progress,,Operations,Tim Versteeg,15/08/2024 14:31:52,tvers,,TRUE
+INC0133817,01/07/2024 11:30:59,NEW GL ACCOUNT needed in CSBA and OCEAN Cargowise  - PPE / Uniforms,Chanel Van Zyl,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,19/08/2024 09:41:15,Mayuri.Reddy@za.steinweg.com,Master Data,TRUE
+INC0134467,02/07/2024 17:00:00,*.relays.steinweg.com expiring on 09/19/2024,Jaring Felizardo JR Sarcino,5 - Very Low,In Progress,,Operations,Jaring Felizardo JR Sarcino,19/08/2024 03:02:18,jfeli,,TRUE
+INC0135014,03/07/2024 14:41:20,Request for USB Ports in meeting Rooms,Francis Fisher,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,24/06/2024 15:25:35,Calin.Legwale@za.steinweg.com,,TRUE
+INC0135147,02/07/2024 09:59:27,Desktop icoontjes knipperen op nieuw horizon omgeving met onedrive,Patrick Buitendijk,5 - Very Low,In Progress,,Project Support Rotterdam,Anton Jakovlev,09/08/2024 10:49:57,pbd,,TRUE
+INC0135484,04/07/2024 13:24:31,reminder: NEW GL ACCOUNT needed in CSBA and OCEAN Cargowise  - PPE / Uniforms,Chanel Van Zyl,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,19/08/2024 09:39:08,Mayuri.Reddy@za.steinweg.com,Master Data,TRUE
+INC0135581,02/07/2024 13:28:36,Horizon gebruiker krijgen binnen general een timeout venster te zien,Rene Bout,5 - Very Low,In Progress,,TAM - Technical Application Management,Jan-Willem Barendrecht,05/07/2024 07:23:46,jwb,,TRUE
+INC0136835,09/07/2024 09:55:10,Wiring at desks on plugs and network cables to be checked - not all working - 1st floor CSBA Finance,Chanel Van Zyl,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,04/07/2024 13:06:59,Clement.Mashala@za.steinweg.com,Hardware,TRUE
+INC0137142,09/07/2024 17:00:00,Re: Case Number 5125146690 - has been Created CRM:0092413002691,Michelle Tinkhof,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,01/07/2024 14:37:56,Calin.Legwale@za.steinweg.com,,TRUE
+INC0137204,10/07/2024 08:31:58,Bridge Shipping interface - duplicate AP invoices,Esla Wickins,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,03/07/2024 13:20:47,Calin.Legwale@za.steinweg.com,,TRUE
+INC0137435,02/07/2024 12:40:38,We cannot create a new teams group,Carlos Vieira,2 - High,In Progress,,Infrastructure,,07/08/2024 18:10:51,cvie,,TRUE
+INC0138119,11/07/2024 14:23:47,"CI ""New Hire Oman"" needs modifications",Hans Heijmans,5 - Very Low,In Progress,,FAM HQ - IT Applications,Rozemarijn Jonker,11/07/2024 10:22:54,eboad,,TRUE
+INC0138320,12/07/2024 08:05:29,FW: Error Running Scheduled Report [CSA Uninvoiced Exception Report - BLK],Sajala Soogreem,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,19/08/2024 09:34:53,Mayuri.Reddy@za.steinweg.com,,TRUE
+INC0139798,17/07/2024 09:19:40,Re: Device,Dexter Hillman,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,05/08/2024 15:46:17,Calin.Legwale@za.steinweg.com,,TRUE
+INC0140200,18/07/2024 09:16:51,Re: C.Steinweg Bridge (PTY) Ltd folder,Dexter Hillman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,09/07/2024 09:20:26,Calin.Legwale@za.steinweg.com,,TRUE
+INC0140376,16/07/2024 09:13:25,Separate Soft commodities department Amsterdam and Rotterdam in MDM,Rozemarijn Jonker,5 - Very Low,In Progress,Software,FAM HQ - CRM/SST/UMS/Compliance,Bart Weiland,06/08/2024 12:01:02,bweil,,TRUE
+INC0140658,19/07/2024 09:09:34,SAP_  Procurement Access to the Transaction History under Query Manager,Melanie Moodley,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,12/07/2024 13:03:49,mmood,Security Profile,TRUE
+INC0140966,17/07/2024 14:30:00,om.vdi.steinweg.com expires in 28 days,Maik Nissen,5 - Very Low,In Progress,,Operations,Weis Mateen,25/07/2024 11:49:12,wmate,,TRUE
+INC0141294,22/07/2024 13:14:40,Replacement Laptop,Elvis Ndlovu,5 - Very Low,In Progress,,ZA - Service Desk,Sphamandla Mkhize,12/07/2024 09:51:37,smkhi,Hardware,TRUE
+INC0141420,18/07/2024 14:30:00,Containers worden bij Broekman Logistics handmatig gekoppeld in JMT terwijl dit automatisch moet.,Yves Schouls,5 - Very Low,In Progress,,FAM HQ - Order management/Compliance/Customs/TOS,Bouke Dambrink,02/08/2024 14:14:40,bdam,,TRUE
+INC0141527,23/07/2024 10:52:44,FW: Anusha Kuwar - Exit (revoke email access 31/08/24),Sphamandla Mkhize,5 - Very Low,In Progress,,ZA - Service Desk,Sphamandla Mkhize,12/07/2024 11:17:45,smkhi,Security Profile,TRUE
+INC0141924,24/07/2024 10:14:09,CW - CSBA  Banking details,Melanie Bezuidenhout,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,19/08/2024 09:28:56,Mayuri.Reddy@za.steinweg.com,Firewall Issues,TRUE
+INC0141925,19/07/2024 16:14:26,Still invoices stuck in tibco,Peter Vortman,5 - Very Low,In Progress,,Tibco / Middleware,,15/08/2024 10:42:16,pvort,,TRUE
+INC0142351,25/07/2024 08:46:07,Auto posting of approved Credits issues. not auto posting,Chanel Van Zyl,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,19/08/2024 09:28:38,Mayuri.Reddy@za.steinweg.com,,TRUE
+INC0142751,26/07/2024 08:01:01,NO ACCESS TO BOS,Felix Simukulwa,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,22/07/2024 13:43:41,Esla.Wickins@za.steinweg.com,Security Profile,TRUE
+INC0142819,26/07/2024 09:24:31,New Email Address Request,Justin Goedhart,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,29/07/2024 12:31:58,Calin.Legwale@za.steinweg.com,MS Office Profiling,TRUE
+INC0142852,17/07/2024 14:27:02,Cant delete appointments.,Kim Lemmens,5 - Very Low,In Progress,,Operations,Eric Bastiaan Net,14/08/2024 10:27:44,ericb,,TRUE
+INC0143173,18/07/2024 09:06:34,New shared mailbox is not added to her Outlook,Ellen van der Ham,5 - Very Low,In Progress,,Infrastructure,Yassir Khamas,15/08/2024 09:36:18,ageen,,TRUE
+INC0143191,29/07/2024 08:23:51,FW: BOS LOG OUT,Clayton Bahnemann,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,22/07/2024 09:05:55,Gomolemo.Kototsi@za.steinweg.com,Security Profile,TRUE
+INC0143281,25/07/2024 10:47:08,FITON bij afhandelen order krijg wit scherm en print niks.,Jean Paul Emeijs,5 - Very Low,In Progress,,FAM HQ - Order management/Compliance/Customs/TOS,Ferry Sla,25/07/2024 10:47:09,system,,TRUE
+INC0143360,29/07/2024 13:35:42,BOS Clear export booking stock balances,Esla Wickins,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,22/07/2024 15:07:32,Calin.Legwale@za.steinweg.com,,TRUE
+INC0143415,29/07/2024 15:08:55,Bridgeport Citrix Idle Time,Reabetswe Tshetlo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,22/07/2024 14:56:15,Calin.Legwale@za.steinweg.com,,TRUE
+INC0143475,25/07/2024 09:00:00,Lag on the new horizon environment,Tom White,4 - Low,In Progress,,Operations,Weis Mateen,08/08/2024 23:09:02,twhit,,TRUE
+INC0143842,23/07/2024 10:40:10,Access to the application is slow,Fabio Santos (Noesis),5 - Very Low,In Progress,,Operations,Weis Mateen,30/07/2024 12:47:42,fsant,,TRUE
+INC0143975,31/07/2024 09:04:35,Re: [Naked Insurance] Re: SUPPORT MESSAGE,Dexter Hillman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,22/07/2024 09:08:26,Calin.Legwale@za.steinweg.com,,TRUE
+INC0144054,31/07/2024 10:43:12,Tablet Reports Amendments,Gomolemo Kototsi,5 - Very Low,In Progress,,ZA - BOS Support,Gomolemo Kototsi,22/07/2024 12:07:52,Calin.Legwale@za.steinweg.com,,TRUE
+INC0144603,31/07/2024 15:46:12,Excel Financials are not pulling properly from CODA. Getting a #NAME? error on cells that need to pull data from CODA,Tom White,5 - Very Low,In Progress,,FAM HQ - Finance,Jim Voorn (Diesis),06/08/2024 11:19:37,ajako,,TRUE
+INC0144762,31/07/2024 10:47:20,AGPM Error ,Gian Luca Ferrari,4 - Low,In Progress,,Operations,Tim Versteeg,08/08/2024 08:58:47,lucaf,,TRUE
+INC0144862,31/07/2024 12:50:44,MTN is extremely slow when downloading report fro the selector,Jurgen Vanhove,4 - Low,In Progress,,Oman - Applications Team,Hans Poels,25/07/2024 10:05:40,hpoel,,TRUE
+INC0144874,25/07/2024 09:00:00,Location Instanbull we cannot set up the mail profile without connecting to zscaler.,Hakan Altun,5 - Very Low,In Progress,,Infrastructure,Joe Chen XuFeng,25/07/2024 08:06:14,kdvri,,TRUE
+INC0144950,02/08/2024 15:07:36,FW: Transport to Mauritius,Deirdre Pedersen,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,05/08/2024 14:40:07,Calin.Legwale@za.steinweg.com,,TRUE
+INC0144953,02/08/2024 15:11:42,Teams Call to Nichola,Heidi Donohue,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,25/07/2024 09:16:08,smkhi,,TRUE
+INC0145066,05/08/2024 09:29:05,Target sheet - Agri & Tobacco,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,25/07/2024 09:59:09,Calin.Legwale@za.steinweg.com,,TRUE
+INC0145071,05/08/2024 09:35:56,SAP Access - Procurement,Lizelle De Villiers,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,25/07/2024 10:06:10,Lizelle.DeVilliers@za.steinweg.com,Security Profile,TRUE
+INC0145086,05/08/2024 09:51:37,SAP: AR Interface,Ashley Raman,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,25/07/2024 09:58:02,Calin.Legwale@za.steinweg.com,,TRUE
+INC0145340,19/08/2024 09:50:59,Microsoft Edge crashes everytime i start it,Thom Van den Akker,4 - Low,In Progress,,Operations,,19/08/2024 08:51:00,zulha,,TRUE
+INC0145500,06/08/2024 11:21:51,RE: UGANDA BOS install,Esla Wickins,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,26/07/2024 11:26:00,Esla.Wickins@za.steinweg.com,,TRUE
+INC0145524,31/07/2024 10:55:31,Unable to receive scanned documents.,Ilse van de Graaf,4 - Low,In Progress,,Operations,Eric Bastiaan Net,14/08/2024 10:06:25,ericb,,TRUE
+INC0145666,06/08/2024 17:00:00,SAP PRINTING,Thobile Ncama,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,29/07/2024 08:20:40,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0145676,06/08/2024 17:00:00,Attached spreadsheet used to upload data in MTN needs a lot of copying of data. Please automate as far as possible.,Sravan Ellendula,5 - Very Low,In Progress,,Oman - Applications Team,Hans Poels,28/07/2024 11:58:51,hpoel,,TRUE
+INC0145689,02/08/2024 14:30:00,Hardware component is in warning or critical state - on  Disk or Disk Bay 9 C1 P1I Bay 1: In Critical Array - on  10.31.125.27,Maik Nissen,5 - Very Low,In Progress,,Operations,Kevin Boerman,02/08/2024 14:30:03,system,,TRUE
+INC0145690,02/08/2024 14:30:00,Hardware component is in warning or critical state - on  Disk or Disk Bay 10 C1 P1I Bay 2: In Critical Array - on  10.31.125.27,Maik Nissen,5 - Very Low,In Progress,,Operations,Kevin Boerman,02/08/2024 14:30:03,system,,TRUE
+INC0145716,06/08/2024 17:00:00,Invoice not same value,Karashme Parsuram,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,02/08/2024 09:08:59,kpars,,TRUE
+INC0145830,07/08/2024 09:32:40,Laptop start up slow,Clair Heldsinger,5 - Very Low,In Progress,,ZA - Service Desk,Sthabiso Ndlovu,29/07/2024 16:08:00,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0146059,07/08/2024 13:16:41,Check ISS TZA Access (BOS Export planner),Esla Wickins,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,29/07/2024 15:47:06,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0146173,07/08/2024 16:43:13,SAP Access - CARLO Transport,Lizelle De Villiers,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,30/07/2024 08:44:16,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0146183,01/08/2024 12:14:56,Internet explorer en of MS Edge,Ed Stevens,4 - Low,In Progress,,Operations,Frank Poot,19/08/2024 08:50:57,zulha,,TRUE
+INC0146222,08/08/2024 08:55:25,My account sign off by it one and askes to close all browser window,Bushra Ali Nasser Al-Breiki,5 - Very Low,In Progress,,Oman - ICT Support,Saif Rashid Al Issai,20/08/2024 06:45:06,mrr,,TRUE
+INC0146572,08/08/2024 16:39:47,RE: X GLOBAL // 2 000MT  BAGGED LITHIUM //  ZIM-JHB-DUR // TABLET REPORT UPDATE,Jane Shih,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,31/07/2024 08:28:07,Calin.Legwale@za.steinweg.com,,TRUE
+INC0146680,09/08/2024 09:38:04,Venezuela Agent website access,Meryka Groenewald,5 - Very Low,In Progress,,ZA - Infrastructure Support,Ndimphiwe Njomboni,31/07/2024 12:17:51,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0146708,09/08/2024 10:17:25,Error on SAP Malawi_ Incorrect payment aging days,Emanuela Campanerut,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,31/07/2024 15:16:09,Calin.Legwale@za.steinweg.com,,TRUE
+INC0146914,05/08/2024 11:35:12,"Thinclient is  stuck on 1 account, dennis cant log in to horizon",Dennis Mureau,5 - Very Low,In Progress,,Operations,Kenneth de Vries,07/08/2024 14:27:19,system,,TRUE
+INC0146979,12/08/2024 08:27:46,CARGO WISE CONNECTION,Beverly Matthews,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Mayuri Reddy,19/08/2024 09:33:09,Mayuri.Reddy@za.steinweg.com,Network,TRUE
+INC0146997,12/08/2024 08:41:54,RE: Cannot access Cashflow - OCEAN USD ONLY! - URGENT!,Chanel Van Zyl,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,15/08/2024 08:45:25,nnjom,Security Profile,TRUE
+INC0147047,12/08/2024 09:48:17,Agri Profit Centres - Finnivo,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,01/08/2024 10:28:31,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147054,12/08/2024 09:55:52,Tablet Reports Amendments,Gomolemo Kototsi,5 - Very Low,In Progress,,ZA - BOS Support,Gomolemo Kototsi,01/08/2024 10:25:14,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147093,12/08/2024 10:47:42,Credit not in SAP,Devinia Subramoney,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,01/08/2024 14:00:19,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147105,12/08/2024 10:58:08,Tablet Reports Amendments,Gomolemo Kototsi,5 - Very Low,In Progress,,ZA - BOS Support,Gomolemo Kototsi,05/08/2024 10:12:10,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147164,12/08/2024 12:01:32,GOLDEN SHELF TRADING 49 - Please de-activate / close account,Diane Trichardt,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,05/08/2024 14:46:48,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147174,12/08/2024 12:36:23,WorkspaceOne is pushing Skype for Business to phone,Hans Heijmans,5 - Very Low,In Progress,,Operations,,08/08/2024 13:28:16,kevin,,TRUE
+INC0147251,12/08/2024 14:35:23,REQUEST TO RESET BOS PASSWORD,Kelvin Mwamba,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,01/08/2024 14:53:08,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147252,12/08/2024 14:35:24,Tablet Reports Amendments,Gomolemo Kototsi,5 - Very Low,In Progress,,ZA - BOS Support,Gomolemo Kototsi,19/08/2024 11:04:36,Gomolemo.Kototsi@za.steinweg.com,,TRUE
+INC0147377,13/08/2024 08:51:34,RE: Unable to log on SAP,Senzo Cebekhulu,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,05/08/2024 14:52:10,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0147379,13/08/2024 08:54:14,RE: INTENDA REPORT,Gomolemo Kototsi,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,05/08/2024 10:28:52,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147468,13/08/2024 11:14:28,CN 9455 & CN 9463 Invoice not same value,Kavitha Inderlall,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,19/08/2024 12:48:48,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147501,13/08/2024 12:45:32,PART CREDITS ON BC,Caryl Powell,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,05/08/2024 14:58:31,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147558,13/08/2024 15:05:09,RE: Control room Staff access,Chizelle Perry,5 - Very Low,In Progress,,ZA - Infrastructure Support,Shabir Saib,05/08/2024 15:42:06,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0147585,09/08/2024 13:15:33,It will take 5 hours to deploy a windows 10 laptop or desktop,Djeffry de Bruin,5 - Very Low,In Progress,,Operations,Khurram Qureshi,09/08/2024 13:15:35,system,,TRUE
+INC0147620,13/08/2024 17:00:00,RE: WEIGH BRIDGE PRINTER,Victor Chisenga Mupeta,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,05/08/2024 09:45:48,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147628,13/08/2024 17:00:00,Laptop with Faulty Speaker,Victor Chisenga Mupeta,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,05/08/2024 09:43:08,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0147726,14/08/2024 08:52:15,SAP Access,Melanie Moodley,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,05/08/2024 09:30:49,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0147727,14/08/2024 08:52:15,"RE: 025 Forklift Bay - Offline camera ""Beira Site""",Shirwin Devan,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,15/08/2024 09:36:16,erabo,Firewall Issues,TRUE
+INC0147746,14/08/2024 09:06:05,Finnivo Volumes,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,05/08/2024 09:28:36,Calin.Legwale@za.steinweg.com,,TRUE
+INC0147909,14/08/2024 12:37:36,JNBO249229,Deline Rafapa,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,05/08/2024 14:13:05,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148034,14/08/2024 16:18:06,New User - Customer Service Controller - Cebile Gugulethu Xaba,Mark Govender,5 - Very Low,In Progress,,ZA - Service Desk,Sphamandla Mkhize,05/08/2024 16:25:15,Calin.Legwale@za.steinweg.com,Application Installation,TRUE
+INC0148091,15/08/2024 08:18:24,RE: SAP User Locked -Reset Password,Monica Greyling,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,06/08/2024 10:15:41,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148139,15/08/2024 09:32:11,check BOS seal - MEDU7493597 / FX31565730,Esla Wickins,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,06/08/2024 09:46:44,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148140,15/08/2024 09:32:13,Bridge Secure : Adding a driver,Dwayn Williams,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,14/08/2024 12:32:54,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148171,15/08/2024 10:03:45,Estimate Report CSL / SharePoint,Meryka Groenewald,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,06/08/2024 10:16:23,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0148229,15/08/2024 11:07:21,Cash Connect down,Heidi Donohue,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,14/08/2024 12:32:19,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0148366,15/08/2024 14:30:01,Website,Avril Evans,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,06/08/2024 16:00:05,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148382,15/08/2024 15:00:56,IT : Display Device offline - Rail - CSBJHBRAILTV01,Chanler Murugan,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,07/08/2024 14:46:50,chanler.murugan@za.steinweg.com,,TRUE
+INC0148511,16/08/2024 08:40:20,BC / BOS GP Report - August,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,07/08/2024 17:35:32,Esla.Wickins@za.steinweg.com,,TRUE
+INC0148616,16/08/2024 11:02:35,FW: POP,Sajala Soogreem,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,07/08/2024 12:39:34,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148671,14/08/2024 14:17:23,Krijgt The application is no longer  available (error 404) bij even niets doen in General.,Stephan Broer,5 - Very Low,In Progress,,Operations,,14/08/2024 15:37:12,system,,TRUE
+INC0148722,16/08/2024 14:51:35,IT : Display Device offline - Distribution JHB - CSBJHBB7TV01,Chanler Murugan,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,20/08/2024 10:42:52,chanler.murugan@za.steinweg.com,,TRUE
+INC0148727,15/08/2024 10:41:02,Kan geen invoices inscannen op DNA3668,Dylan Brak,5 - Very Low,In Progress,,Operations,,15/08/2024 16:51:43,vdbos,,TRUE
+INC0148855,19/08/2024 08:31:55,Cash Connect error message,Emily Chien,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,14/08/2024 12:31:57,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0148954,22/08/2024 15:25:29,Teams connection is constantly interupting during calls on Ipad with Zscaler being active.,Nicolas Flamant,5 - Very Low,In Progress,,Noesis Support,Andre Miguel Sousa,19/08/2024 19:56:47,flam,,TRUE
+INC0148989,19/08/2024 11:40:51,FAILING TO SYNC,Nicholas Nkhoma,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,08/08/2024 14:27:13,Calin.Legwale@za.steinweg.com,,TRUE
+INC0148998,15/08/2024 11:56:47,mail from customer not received,Charles Reynolds-Payne,4 - Low,In Progress,,Operations,Eric Bastiaan Net,08/08/2024 15:37:22,ygeff,,TRUE
+INC0149100,19/08/2024 15:31:19,RE: Zambia,Leigh Parsons,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,12/08/2024 08:56:58,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149189,15/08/2024 15:43:01,Office wallboard geeft aan dat er 2 incidenten soon breachen,Alexandra Geene,5 - Very Low,In Progress,,FAM HQ - IT Applications,Rozemarijn Jonker,15/08/2024 15:43:02,system,,TRUE
+INC0149374,20/08/2024 17:00:00,B01-Perimeter 21-Offline camera,Controlroom.JHB ,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,12/08/2024 08:47:36,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149426,21/08/2024 08:02:30,Storage,Graham Wren,5 - Very Low,In Progress,,ZA - Infrastructure Support,Ndimphiwe Njomboni,12/08/2024 08:41:02,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149438,21/08/2024 08:26:56,Re: New user Form- Nothando,Sphamandla Mkhize,5 - Very Low,In Progress,,ZA - Service Desk,Sphamandla Mkhize,12/08/2024 08:39:03,Calin.Legwale@za.steinweg.com,Application Installation,TRUE
+INC0149533,21/08/2024 09:42:11,Fw: MFA and SHARE DRIVE,Juvenalis Swai,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,12/08/2024 10:18:18,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149552,19/08/2024 16:50:55,DNB1167 Weird symbols comes out of the printer when printing a PDF.,Michael Kalkman,4 - Low,In Progress,,Service Desk Rotterdam,Ugur Duygu,19/08/2024 16:50:57,system,,TRUE
+INC0149620,21/08/2024 10:33:56,Bridge Connect,Paula Rebelo da Silva,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,12/08/2024 15:28:48,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0149674,21/08/2024 11:06:31,Cargo Wise Not Opening,Nsika Mfeka,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,15/08/2024 14:45:54,Stuart.Kinnear@za.steinweg.com,,TRUE
+INC0149748,21/08/2024 12:14:32,RE: SAP Citrix,Senzo Cebekhulu,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,12/08/2024 12:17:56,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149777,21/08/2024 12:47:25,FW: Nadine,Nadine Britt,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,12/08/2024 14:42:32,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149789,21/08/2024 13:06:53,RE: 'External Email : 'RE: Bridge Connect,Paula Rebelo da Silva,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,12/08/2024 14:37:15,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0149792,19/08/2024 09:22:48,Edge crashed bij starten,Jojan van Dokkum,4 - Low,In Progress,,Operations,,19/08/2024 09:22:49,system,,TRUE
+INC0149818,21/08/2024 16:08:57,excel in horizon,Debora Maggio,5 - Very Low,In Progress,,Servicedesk Italy,,12/08/2024 16:21:53,dmag,,TRUE
+INC0149840,13/08/2024 10:13:22,Unable to login to Horizon,Fabian Quint,4 - Low,In Progress,,Operations,Jeroen Venant (PQR),16/08/2024 12:39:00,mniss,,TRUE
+INC0149904,21/08/2024 15:40:35,Fiscal Device configuration,Brian Nyakioga,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,13/08/2024 08:59:22,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149909,21/08/2024 16:12:36,Clone HD Disk to SSD,Mansell Forner Dos Santos,5 - Very Low,In Progress,,ZA - Infrastructure Support,Ndimphiwe Njomboni,13/08/2024 08:47:51,Calin.Legwale@za.steinweg.com,,TRUE
+INC0149917,21/08/2024 16:34:32,Re: Cape town cameras offline,Dexter Hillman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,13/08/2024 09:33:16,dhill,,TRUE
+INC0150004,22/08/2024 08:48:08,BC / BOS GP Report,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,13/08/2024 08:55:58,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150074,22/08/2024 09:49:31,FW: AMENDMENT TO IMPORT & EXPORT TERMINAL HANDLING CHARGES (THC) BILLED BY TPT,Devan Naidoo,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Mayuri Reddy,19/08/2024 09:56:09,Mayuri.Reddy@za.steinweg.com,,TRUE
+INC0150168,22/08/2024 11:13:05,Locations to create on CW for CPT WH,Tamara Chetty,5 - Very Low,In Progress,,ZA - Bridge Connect,Myles Hancock,15/08/2024 14:41:26,Stuart.Kinnear@za.steinweg.com,,TRUE
+INC0150205,22/08/2024 11:57:54,Rapid7 Agent installer,Gian Luca Ferrari,5 - Very Low,In Progress,,Operations,Michael Bos,13/08/2024 15:59:12,lucaf,,TRUE
+INC0150238,16/08/2024 12:43:59,General gives a lot of login screens,Martijn van Groningen,4 - Low,In Progress,,Operations,Maik Nissen,16/08/2024 12:44:01,system,,TRUE
+INC0150331,20/08/2024 13:14:25,Er wordt elke dag stock report automatisch naar Rusal D64456 gestuurd. Zij vragen of size ook toegevoegd kan worden.,Ivan Bogoun,5 - Very Low,In Progress,,TAM - Technical Application Management,Roy Coppens (Informa),19/08/2024 11:44:43,system,,TRUE
+INC0150336,22/08/2024 16:04:25,Add CSB Scanner,Nicki Van Der Walt,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,14/08/2024 08:25:53,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150339,14/08/2024 09:00:00,Content E-mail is not loading,Ferry Jansen,5 - Very Low,In Progress,,Operations,,19/08/2024 12:35:13,system,,TRUE
+INC0150344,22/08/2024 16:19:18,New Starters,Gabisile Mthembu,5 - Very Low,In Progress,,ZA - Service Desk,Nathi Ndlazi,14/08/2024 08:54:53,Calin.Legwale@za.steinweg.com,Application Installation,TRUE
+INC0150348,22/08/2024 16:23:18,CSBCPTLABEL,Edwin Williams,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Myles Hancock,16/08/2024 10:53:29,Stuart.Kinnear@za.steinweg.com,,TRUE
+INC0150363,20/08/2024 17:00:00,OM Backup Error,Jaring Felizardo JR Sarcino,4 - Low,In Progress,,Operations,Jaring Felizardo JR Sarcino,16/08/2024 10:05:40,jfeli,,TRUE
+INC0150418,23/08/2024 08:07:34,renwe class marker  license,Khawla Issa Al Ymani,5 - Very Low,In Progress,,Oman - ICT Support,Mohd Raziuddin Rizwan,14/08/2024 08:32:06,mrr,,TRUE
+INC0150420,23/08/2024 08:10:38,RE: payment processing access,Sajala Soogreem,5 - Very Low,In Progress,,ZA - Cargo Wise Support,Stuart Kinnear,15/08/2024 14:34:23,Stuart.Kinnear@za.steinweg.com,Security Profile,TRUE
+INC0150437,23/08/2024 08:27:00,IT - LAPTOP SCREEN,Johan Swanepoel,5 - Very Low,In Progress,,ZA - Service Desk,Nathi Ndlazi,14/08/2024 08:55:36,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150453,23/08/2024 08:41:50,SAP LOG IN ERROR,Lorraine Zaweni,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,14/08/2024 09:02:54,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0150462,22/08/2024 12:39:29,ESET not activated,Floris van der Giessen,5 - Very Low,In Progress,,Operations,,20/08/2024 09:58:50,zulha,,TRUE
+INC0150489,23/08/2024 09:17:37,BC / BOS GP Report,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,14/08/2024 09:28:49,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150514,14/08/2024 11:03:59,Tagetik users are unable to change their password when it is expired.,Alexandra Geene,5 - Very Low,In Progress,,Operations,,19/08/2024 14:34:11,system,,TRUE
+INC0150518,23/08/2024 09:57:57,BOS invoice,Latoya Makhoane,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,15/08/2024 09:09:29,Gomolemo.Kototsi@za.steinweg.com,,TRUE
+INC0150565,14/08/2024 12:35:05,Unable to activate office.,Ewa Kunicka,3 - Moderate,In Progress,,Operations,Kevin Boerman,15/08/2024 14:00:23,kevin,,TRUE
+INC0150581,23/08/2024 12:02:17,Termination,Gabisile Mthembu,5 - Very Low,In Progress,,ZA - Service Desk,Senzo Cebekhulu,14/08/2024 12:25:24,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150582,23/08/2024 12:07:02,Access to create supplier on ATM (SAP),Lizelle De Villiers,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,14/08/2024 12:26:04,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0150629,23/08/2024 13:43:25,Access to Business Partners - Lizelle De Villers,Reabetswe Tshetlo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,14/08/2024 14:16:19,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0150683,21/08/2024 12:02:10,Soft Commodities Rotterdam/Amsterdam updated/added in MDM - Did not end up correct in UMS,Bart Weiland,5 - Very Low,In Progress,,TAM - Technical Application Management,Telmo Parreira,20/08/2024 10:32:43,system,,TRUE
+INC0150731,23/08/2024 16:14:04,Read Access to DRC Database,Reabetswe Tshetlo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,19/08/2024 11:14:24,nnjom,Security Profile,TRUE
+INC0150742,21/08/2024 17:00:00,General's print properties,Tom White,4 - Low,In Progress,,TAM - Technical Application Management,,16/08/2024 10:48:36,jwb,,TRUE
+INC0150743,23/08/2024 17:00:00,Wrong task assignemt,Gian Luca Ferrari,5 - Very Low,In Progress,,FAM HQ - IT Applications,Rozemarijn Jonker,19/08/2024 09:36:23,rojon,,TRUE
+INC0150810,15/08/2024 09:00:00,Blackscreen on NL-HAA-RDS041P,Jordi van der Kooij,5 - Very Low,In Progress,,Operations,Khurram Qureshi,15/08/2024 10:50:51,kqure,,TRUE
+INC0150851,26/08/2024 09:01:33,Invoice IN129139 - Dell Keyboard Replacement,Clement Mashala,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,15/08/2024 09:22:13,Calin.Legwale@za.steinweg.com,,TRUE
+INC0150862,21/08/2024 16:29:33,can't reassign Problems,Bert Barendrecht,5 - Very Low,In Progress,,FAM HQ - IT Applications,Remco Haandrikman,15/08/2024 14:51:51,bbare,,TRUE
+INC0150883,26/08/2024 09:58:09,RE: Printer,Michelle Steenberg,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,15/08/2024 10:07:47,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0150917,23/08/2024 11:28:06,Order 32750055 Internal invoice stuck,Peter Vortman,5 - Very Low,In Progress,,TAM - Technical Application Management,Pedro de Sousa,20/08/2024 08:18:57,pvort,,TRUE
+INC0150918,26/08/2024 10:26:50,Formula error on group rates,Thavendren Naidoo,5 - Very Low,In Progress,,FAM HQ - Finance,Marco van den Bos,16/08/2024 11:34:17,vdbos,,TRUE
+INC0150952,26/08/2024 11:22:02,PRINTER RICHO 3504ex,Lucky Mashimbyi,5 - Very Low,In Progress,,ZA - Service Desk,Nathi Ndlazi,19/08/2024 08:42:32,dhill,Hardware,TRUE
+INC0150991,26/08/2024 12:25:20,Request for read access - TitanJHB,James Koch,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,16/08/2024 10:46:11,erabo,Security Profile,TRUE
+INC0151014,15/08/2024 16:02:00,Program won't install,Gabriel Roque,5 - Very Low,In Progress,,Operations,Kevin Boerman,15/08/2024 16:32:06,tvers,,TRUE
+INC0151018,22/08/2024 12:10:22,Telefoon krijgt geen emails en contacten binnen.,Rob Tetteroo,5 - Very Low,In Progress,,Service Desk Rotterdam,Zain Ul-Haq,20/08/2024 10:42:48,zulha,,TRUE
+INC0151101,26/08/2024 15:11:09,FW: BridgeConnect: Correct Version Update – Action Required,Magan Pillay,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,15/08/2024 15:17:26,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0151106,22/08/2024 12:44:26,Vorige week is in Marcor Stevedoring (08) MK1 en MK2 aangemaakt voor de nieuwe mobiele kranen. Nu had ik al wat geboekt onder 42000.MK1 in periode 07,Michael Verwijmeren,5 - Very Low,In Progress,,FAM HQ - Finance,Jim Voorn (Diesis),16/08/2024 10:26:51,vdbos,,TRUE
+INC0151117,26/08/2024 15:27:42,RE: Reset BOS password,Mwenso Kabwela,5 - Very Low,In Progress,,ZA - OVB Techs,Mwenso Kabwela,15/08/2024 19:05:53,Esla.Wickins@za.steinweg.com,Security Profile,TRUE
+INC0151175,26/08/2024 17:00:00,GDN CORRECTIONS,Mpasi Wale,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,16/08/2024 08:43:07,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151176,26/08/2024 17:00:00,NL-JMT-AS01P -  Disk is in critical state!,Jaring Felizardo JR Sarcino,5 - Very Low,In Progress,,Operations,Maik Nissen,16/08/2024 03:54:49,mniss,,TRUE
+INC0151247,16/08/2024 11:25:08,Inloggen op chrome,Sjors de Bruyn,5 - Very Low,In Progress,,Operations,,16/08/2024 10:25:08,qnove,,TRUE
+INC0151260,27/08/2024 09:01:21,520002705 - unable to scan MSDU8786318,Mthokozisi Mzimela,5 - Very Low,In Progress,,ZA - Service Desk,Senzo Cebekhulu,19/08/2024 08:40:10,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151365,16/08/2024 12:43:35,LABELPRINT DNB1533 WERKT NIET,Jordi Minkema,3 - Moderate,In Progress,,Operations,Tim Versteeg,20/08/2024 11:09:50,tvers,,TRUE
+INC0151374,27/08/2024 11:26:44,Ashley Raman - Restrict Folders,Ashley Raman,5 - Very Low,In Progress,,ZA - Infrastructure Support,Ndimphiwe Njomboni,16/08/2024 12:36:21,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151381,27/08/2024 12:19:00,BRIDGE CONNECT,Loni Shott,5 - Very Low,In Progress,,ZA - Bridge Connect,Gomolemo Kototsi,16/08/2024 12:35:25,Calin.Legwale@za.steinweg.com,Network,TRUE
+INC0151392,27/08/2024 13:02:53,Warrant Message,Khanyo Nxumalo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,16/08/2024 14:45:06,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151397,27/08/2024 13:47:16,RE: My e-mails,Terry Kongolo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,16/08/2024 14:44:28,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151473,27/08/2024 17:00:00,CARLO : PRICING STRUCTURE FOR UNITED CAPITAL FERTILIZER,Peter Lehman,5 - Very Low,In Progress,,ZA - Carlo Support,Chanler Murugan,19/08/2024 09:22:16,chanler.murugan@za.steinweg.com,,TRUE
+INC0151476,27/08/2024 17:00:00,Surveillance Cameras at back Office WH 02,Alisson Esmael,5 - Very Low,In Progress,,ZA - OVB Techs,Mansell Forner Dos Santos,19/08/2024 08:21:53,Mansel.DosSantos@za.steinweg.com,,TRUE
+INC0151478,27/08/2024 17:00:00,Assistance Required with Client Emails Directed to Remmy Ngetich,Sassen Oluoch Ogutu,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 08:36:54,Calin.Legwale@za.steinweg.com,Firewall Issues,TRUE
+INC0151480,27/08/2024 17:00:00,Cannot Log onto SAP,Karashme Parsuram,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,19/08/2024 09:19:14,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0151488,27/08/2024 17:00:00,VPN Disconnected,Karashme Parsuram,5 - Very Low,In Progress,,ZA - Service Desk,Sphamandla Mkhize,19/08/2024 08:41:21,Calin.Legwale@za.steinweg.com,VPN Access,TRUE
+INC0151505,23/08/2024 14:30:00,All - Disk space is in warning state - on  E:\ - on  NL-FS-01,Maik Nissen,5 - Very Low,In Progress,,Operations,Maik Nissen,19/08/2024 05:51:13,mniss,,TRUE
+INC0151536,27/08/2024 17:00:00,New Mouse and Keyboard,Dane Hauptfleisch,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,19/08/2024 08:50:05,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0151565,28/08/2024 08:21:17,Email address not in inbox,Brandon Lane,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 12:01:27,dhill,,TRUE
+INC0151572,28/08/2024 08:26:59,ZTE,Chantel Roach,5 - Very Low,In Progress,,ZA - Service Desk,Ndimphiwe Njomboni,19/08/2024 11:04:04,smkhi,,TRUE
+INC0151580,19/08/2024 09:47:23,Blackscreen on AMS-RDS009P,Britt van Strijbos,5 - Very Low,In Progress,,Operations,Khurram Qureshi,19/08/2024 11:04:06,kqure,,TRUE
+INC0151582,28/08/2024 08:42:31,B09 warehouse new locations,Norman Nkuna,5 - Very Low,In Progress,,ZA - Cargo Wise Support,,19/08/2024 13:05:20,Esla.Wickins@za.steinweg.com,Master Data,TRUE
+INC0151583,28/08/2024 08:42:33,Billing tool,Michelle Tinkhof,5 - Very Low,In Progress,,ZA - Service Desk,Ndimphiwe Njomboni,19/08/2024 08:49:30,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151590,21/08/2024 15:50:48,Edge crash't op startup.,Mesut Altintas,4 - Low,In Progress,,Operations,,19/08/2024 08:51:00,zulha,,TRUE
+INC0151601,28/08/2024 08:54:23,Request for read acces,James Koch,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 10:02:17,Clement.Mashala@za.steinweg.com,,TRUE
+INC0151635,23/08/2024 15:18:19,order 43532399 kan niet DEF gemaakt worden,Luc Houtman,5 - Very Low,In Progress,,TAM - Technical Application Management,Roy Coppens (Informa),20/08/2024 10:56:18,lhout,,TRUE
+INC0151658,28/08/2024 09:35:14,BC / BOS GP Report,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,19/08/2024 09:43:07,Gomolemo.Kototsi@za.steinweg.com,Finance,TRUE
+INC0151675,28/08/2024 09:52:14,Unable to view or download documents sent by clients,Erwin James,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 12:14:20,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151712,28/08/2024 11:07:24,CARLO SCM integration change request - ADD Org to invoice number,Peter Van Staaden,5 - Very Low,In Progress,,ZA - Carlo Support,Tyler Herron,19/08/2024 11:13:05,ashley.raman@za.steinweg.com,,TRUE
+INC0151720,28/08/2024 11:13:14,ISSUES LOGGING ON TO NEW ``MOBILE`` WIFI @ WAREHOUSE 1,Lloyd Dlamini,5 - Very Low,In Progress,,ZA - Service Desk,Sthabiso Ndlovu,20/08/2024 08:57:52,nnjom,Application Bug,TRUE
+INC0151727,28/08/2024 11:32:36,Update Group Email Addresses,Stuart Kinnear,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 12:11:02,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151728,28/08/2024 11:32:37,FW: IT Form - Sinazo,Rose Ramatlotlo,5 - Very Low,In Progress,,ZA - Service Desk,Calin Legwale,19/08/2024 12:10:34,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151744,28/08/2024 12:33:50,Chemicals email address,Elvis Ndlovu,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 14:19:15,endlo,,TRUE
+INC0151746,28/08/2024 12:33:57,Trouble logging into account,Cohen Picolo,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,19/08/2024 12:49:26,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0151750,26/08/2024 14:26:55,Netwerk verbinding valt regelmatig weg bij de 2e loge Pier 567,Swen Schuttinga,5 - Very Low,In Progress,,Operations,Berwa Saleh,20/08/2024 08:43:50,bsale,,TRUE
+INC0151770,19/08/2024 14:42:52,RITM0046734 Not performed correctly,Jim Servaes,5 - Very Low,In Progress,,Operations,Kevin Boerman,20/08/2024 09:35:36,kevin,,TRUE
+INC0151816,28/08/2024 14:41:24,Mimecast issue,Lisa Lowe,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 15:25:01,Calin.Legwale@za.steinweg.com,Firewall Issues,TRUE
+INC0151820,28/08/2024 14:52:41,Andrew Smith E-mail,Antionette Labuschagne,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,20/08/2024 11:02:01,antionette.Labuschagne@za.steinweg.com,,TRUE
+INC0151834,27/08/2024 08:31:43,mijn ipad maakt geen internetvebinding.,Dominic Gruszczynski,5 - Very Low,In Progress,,Service Desk Rotterdam,Zain Ul-Haq,20/08/2024 11:12:24,zulha,,TRUE
+INC0151839,26/08/2024 13:22:40,Er wordt elke dag bijgaand voorraad rapport naar Rusal D64456 gestuurd.,Ivan Bogoun,5 - Very Low,In Progress,,TAM - Technical Application Management,Telmo Parreira,20/08/2024 09:23:51,jwb,,TRUE
+INC0151842,28/08/2024 15:56:54,"Offline cameras-GH1 Gantry Top Out,GH1 LPR Gantry Boom Out",Controlroom.DBN ,5 - Very Low,In Progress,,ZA - Infrastructure Support,Ndimphiwe Njomboni,19/08/2024 16:17:53,Calin.Legwale@za.steinweg.com,CCTV Issues,TRUE
+INC0151843,26/08/2024 14:29:07,Is het mogelijk om onze spitsen en samenpak order van definitief af te halen.,Rene Dielessen,5 - Very Low,In Progress,,FAM HQ - Order management/Compliance/Customs/TOS,Melvin van der Mooren,20/08/2024 07:41:29,rdie,,TRUE
+INC0151844,28/08/2024 16:02:39,NELISWA MABASO,Zamaweza Mthalane,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 16:15:57,Zamaweza.Mthalane@za.steinweg.com,,TRUE
+INC0151847,28/08/2024 16:12:18,FW: You have new held messages,Amanda Hadebe,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,19/08/2024 16:17:26,Calin.Legwale@za.steinweg.com,Firewall Issues,TRUE
+INC0151852,28/08/2024 16:27:21,FW: First Technology IT Suppliers - Statement - STEIN87 - 31-JUL-24,Priyanka Naidoo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,20/08/2024 08:49:44,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0151853,28/08/2024 16:31:40,FW: Green Office Statement - 31/07/2024,Priyanka Naidoo,5 - Very Low,In Progress,,ZA - Service Desk,Senzo Cebekhulu,20/08/2024 08:24:01,scebe,,TRUE
+INC0151857,28/08/2024 16:39:29,FW: HellermannTyton Customer Statement,Priyanka Naidoo,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,20/08/2024 08:50:19,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151865,28/08/2024 17:00:00,USER ACCOUNT MS 365 LICENSE,Juvenalis Swai,5 - Very Low,In Progress,,ZA - Infrastructure Support,Dexter Hillman,20/08/2024 08:51:04,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0151866,28/08/2024 17:00:00,Re: BOS ACCOUNT CREATION,Juvenalis Swai,5 - Very Low,In Progress,,ZA - BOS Support,Anele Mabuya,20/08/2024 08:51:46,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151867,28/08/2024 17:00:00,JNBO249960,Rennie Sukumani,5 - Very Low,In Progress,,ZA - BOS Support,Esla Wickins,20/08/2024 08:48:39,Calin.Legwale@za.steinweg.com,Warehouse Management,TRUE
+INC0151869,20/08/2024 09:00:00,flickering black screen on HAA-RDS010P,Ying Ying Sim,5 - Very Low,In Progress,,Operations,Khurram Qureshi,20/08/2024 08:06:50,kqure,,TRUE
+INC0151880,28/08/2024 17:00:00,B01-Perimeter 21-Offline camera,Controlroom.JHB ,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,20/08/2024 08:47:40,Calin.Legwale@za.steinweg.com,,TRUE
+INC0151882,28/08/2024 17:00:00,CarLo Access,Christine Pater,5 - Very Low,In Progress,,ZA - Carlo Support,Ashley Raman,20/08/2024 08:05:08,cpate,Security Profile,TRUE
+INC0151913,26/08/2024 14:30:00,Black screens on AMS-RDS012P,Cmilja Delic,5 - Very Low,In Progress,,Operations,Khurram Qureshi,20/08/2024 08:06:16,kqure,,TRUE
+INC0151922,29/08/2024 08:10:42,Replacement mouse,Nikita Lawrence,5 - Very Low,In Progress,,ZA - Service Desk,Clement Mashala,20/08/2024 08:34:54,Calin.Legwale@za.steinweg.com,Hardware,TRUE
+INC0151923,22/08/2024 15:30:00,access to service now,Rickbert Tjeenk Willink,4 - Low,In Progress,,FAM HQ - IT Applications,,20/08/2024 11:11:08,rojon,,TRUE
+INC0151926,26/08/2024 14:30:00,Materiaal toegevoegd via app - niet zichtbaar in web,Alexander de Zeeuw,5 - Very Low,In Progress,,FAM HQ - Ultimo,Miranda Stegers,20/08/2024 08:25:25,miran,,TRUE
+INC0151940,29/08/2024 08:39:49,carlo tour price updating,Bryan Coleby,5 - Very Low,In Progress,,ZA - Carlo Support,Ashley Raman,20/08/2024 10:11:44,ashley.raman@za.steinweg.com,,TRUE
+INC0151947,29/08/2024 08:46:50,BC / BOS GP Report,Tenille Naidoo,5 - Very Low,In Progress,,ZA - SAP Support,Reabetswe Tshetlo,20/08/2024 10:01:35,Reabetswe.Tshetlo@za.steinweg.com,Finance,TRUE
+INC0151957,20/08/2024 09:56:57,DNB1528 print niet.,Regina Godding,5 - Very Low,In Progress,,Operations,Tim Versteeg,20/08/2024 09:52:56,tvers,,TRUE
+INC0151962,29/08/2024 08:51:05,RE: Access to Cameras,Norman Nkuna,5 - Very Low,In Progress,,ZA - Infrastructure Support,Eddie Rabotapi,20/08/2024 08:54:23,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0151983,26/08/2024 15:06:38,Kan niet inloggen in Fiton,Victor Sekreve,5 - Very Low,In Progress,,FAM HQ - Order management/Compliance/Customs/TOS,Ferry Sla,20/08/2024 09:26:57,fsla,,TRUE
+INC0152031,26/08/2024 16:06:50,Disk alarm meldingen,Jan Hein Moors,5 - Very Low,In Progress,,Service Desk Rotterdam,Ugur Duygu,20/08/2024 11:02:08,uduyg,,TRUE
+INC0152043,23/08/2024 09:00:03,LOGIS INBOUND ORDERS 43735942  + 43736954,Janny van der Linden,4 - Low,In Progress,,FAM HQ - Order management/Compliance/Customs/TOS,,20/08/2024 10:32:19,uduyg,,TRUE

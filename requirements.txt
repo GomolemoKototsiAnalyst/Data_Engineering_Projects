@@ -8,5 +8,4 @@ plotly==5.23.0
 Requests==2.32.3
 streamlit==1.38.0
 streamlit_option_menu==0.3.13
-<<<<<<< HEAD
 ~treamlit==1.36.0

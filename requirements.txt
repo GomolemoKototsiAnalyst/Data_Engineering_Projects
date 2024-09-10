@@ -10,5 +10,3 @@ streamlit==1.38.0
 streamlit_option_menu==0.3.13
 <<<<<<< HEAD
 ~treamlit==1.36.0
-=======
->>>>>>> a3d745b95f92db31ec1230e341ccf58cc85ca5cb

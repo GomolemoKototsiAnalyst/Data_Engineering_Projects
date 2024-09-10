@@ -1,0 +1,23 @@
+number,due_date,short_description,caller_id,priority,state,category,assignment_group,assigned_to,sys_updated_on,sys_updated_by,u_service_offering_subcategory,active
+INC0080153,17/10/2023 12:11:43,error message on winsteinweg,Roberto Repetto,5 - Very Low,New,,FAM Italy,,03/04/2024 07:28:26,nndla,,TRUE
+INC0107462,21/03/2024 15:31:33,"NOT ABLE TO SEE ""EUROPA SERVIZI TERMINALISTICI"" AS ""CARICATORE""",Gianmaria Bertani,5 - Very Low,New,,FAM Italy,,20/03/2024 13:14:59,eguzz,,TRUE
+INC0140659,10/07/2024 10:18:00,Query about OM-DFS-02P.azure.steinwerg.cloud,Jaring Felizardo JR Sarcino,5 - Very Low,New,,Oman - ICT Support,,04/08/2024 08:45:44,mbalu,,TRUE
+INC0149660,13/08/2024 13:58:26,Fwd: C Steinweg Bridge Durban | GGBC | Durban Cargo - Destruction | GLCE62 (SBLKSD23050002)| Schedule approved | SES Rejected by AP | Revised SES Approved | Ple,Juan-Marc Fryer,5 - Very Low,New,,ZA - Service Desk,,12/08/2024 10:58:27,system,Firewall Issues,TRUE
+INC0150046,13/08/2024 10:30:56,Outlook and Skype are asking for my password after every reboot,Michel Bal,5 - Very Low,New,,Operations,,15/08/2024 08:25:41,mbal,,TRUE
+INC0151507,19/08/2024 09:00:00,Hardware component is in warning or critical state - on  Gi1/0/26 Receive Power Sensor - on  pier1-cisco-10.net.steinweg.nl,Maik Nissen,5 - Very Low,New,,Operations,,19/08/2024 05:55:33,mniss,,TRUE
+INC0151721,20/08/2024 14:13:15,IMCD- EDI- 8654140- 59033OT,Tamara Chetty,5 - Very Low,New,,ZA - Cargo Wise Support,,19/08/2024 13:26:28,tamara.chetty@za.steinweg.com,Firewall Issues,TRUE
+INC0151883,21/08/2024 11:00:00,_All - Disk space is in warning state - on  E:\ Label:New Volume DC821259 - on  OM-GCO-03P,Bong Chi Yik,5 - Very Low,New,,Operations,,20/08/2024 03:49:03,cybon,,TRUE
+INC0151884,21/08/2024 11:00:00,Ages VM snapshot NL-VCSA-AS03P in the Totality Vcenter server,Bong Chi Yik,5 - Very Low,New,,Operations,,20/08/2024 03:51:39,cybon,,TRUE
+INC0151990,21/08/2024 12:06:35,One invoice cannot be generated completely to check draft - Debtor K0009 Kingdom of Middle East Co LLC,Marilen Yap,5 - Very Low,New,,Oman - Applications Team,,20/08/2024 09:06:36,maril,,TRUE
+INC0152003,21/08/2024 12:13:05,FW: Logins,Stuart Kinnear,5 - Very Low,New,,ZA - Cargo Wise Support,,20/08/2024 09:15:34,Calin.Legwale@za.steinweg.com,Security Profile,TRUE
+INC0152006,21/08/2024 12:19:07,Gate 2 Bridge Secure Tablet,Karel Vlok,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 09:19:07,system,Security Profile,TRUE
+INC0152016,21/08/2024 12:44:20,TO NOT REFLECTING ON DEDICATED SIDE,Jacob Kethro,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 09:44:20,system,Firewall Issues,TRUE
+INC0152034,21/08/2024 13:06:28,DYLAN BOS,Dylan Smith,5 - Very Low,New,,ZA - BOS Support,,20/08/2024 10:06:28,system,Security Profile,TRUE
+INC0152039,21/08/2024 13:12:28,BRIDGE CONNECT : UNABLE TO TYPE CLIENT NAME,Kabwe Katunga,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 10:12:29,system,Application Bug,TRUE
+INC0152040,21/08/2024 13:22:12,BOS - Login Error,Sahil Moosa,5 - Very Low,New,,ZA - BOS Support,,20/08/2024 10:22:12,system,Security Profile,TRUE
+INC0152042,21/08/2024 13:29:50,RE: Cargo Wise Not Opening,Nsika Mfeka,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 10:32:23,scebe,Application Bug,TRUE
+INC0152047,20/08/2024 12:39:55,Missing files ??,Bjorn Oomen,4 - Low,New,,Service Desk Rotterdam,,20/08/2024 10:39:55,bjorn,,TRUE
+INC0152061,21/08/2024 14:09:52,AVM Finance Notification,Stuart Kinnear,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 11:09:52,system,Firewall Issues,TRUE
+INC0152062,20/08/2024 11:41:32,43735940 - UNPICK AND CANCEL,Joy van Uden,2 - High,New,,Service Desk Rotterdam,,20/08/2024 11:11:32,jvude,,TRUE
+INC0152065,21/08/2024 14:15:47,Request to Add Esther Mikwa to KenyaTeaExport@za.steinweg.com,Sassen Oluoch Ogutu,5 - Very Low,New,,ZA - Service Desk,,20/08/2024 11:15:48,system,Firewall Issues,TRUE
+INC0152066,,CMS zetten lukt niet,Joey Korver,5 - Very Low,New,,Service Desk Rotterdam,,20/08/2024 11:15:53,jkorv,,TRUE

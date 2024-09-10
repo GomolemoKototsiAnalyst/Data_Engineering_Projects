@@ -3,7 +3,6 @@
 
 # In[1]:
 
-
 import streamlit as st
 
 st.set_page_config(page_title="",layout='wide', page_icon="👋")
@@ -25,7 +24,8 @@ from io import BytesIO
 from streamlit_option_menu import option_menu
 import py3Dmol
 import warnings
-import warnings
+import os
+import requests
 warnings.simplefilter(action='ignore', category=Warning)
 
 def intro():
@@ -188,7 +188,9 @@ def intro():
     col1, col2 = st.columns([1,2])
     with col1:
         #st.markdown("Gomolemo Kototsi",unsafe_allow_html=True)
-        st.image('C:/Users/Gomolemo.Kototsi/Downloads/IMG_20211108_144305_755.webp', width=600)
+        import os
+        Gomolemo_path = os.path.join('Images', 'IMG_20211108_144305_755.webp')
+        st.image(Gomolemo_path, width=600)
     with col2:
         # Add a description on the right side:
         st.markdown(
@@ -295,34 +297,31 @@ def ITSM_Incident_Portal():
     import folium
     import matplotlib.pyplot as plt
     import base64
+    import requests
+    from io import StringIO
+    from io import BytesIO
+    import os
 
-    #st.markdown("Regional Service Group Analysis")   
-    #st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
-    
     #Creating a holding frame for my svg icons: 
     def encode_image(image_file):
         with open(image_file, 'rb') as f:
             encoded = base64.b64encode(f.read()).decode()
         return f"data:image/svg+xml;base64,{encoded}"
     
+    #Importing data  
+    sys_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+    New = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv')
+    Resolved = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv',encoding='latin')
+    data = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv')
+    InProgress = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv', encoding='latin')
+    dataA = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Incident_A.csv')
+    dataB = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_B.csv')
+    dataC = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_C.csv')
+    dataD = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_D.csv')
+    OnHold = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold_1.csv')
+    endusers_list = pd.read_csv(sys_path)
+
     #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
-    #@st.cache_data
-    loc= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-    data = pd.read_csv(loc, encoding='ISO-8859-1')
-    
-    # Additional Files: 
-    InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
-
-    Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
-
-    OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
-
-    New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    New = pd.read_csv(New, encoding='ISO-8859-1')
-    
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
@@ -336,21 +335,25 @@ def ITSM_Incident_Portal():
     New.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
 
+    #data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+     #  'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+
     data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
-
+    dataA.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataB.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataC.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataD.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+   
     #Working Merged Dataframe: 
-    df_merged= pd.concat([data, InProgress, OnHold, New, Resolved], ignore_index=True)
+    df_merged= pd.concat([data,dataA,dataB,dataC,dataD, InProgress, OnHold, New, Resolved], ignore_index=True)
 
     #ETL Process to create multiple data marts:: 
     df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
-    
-    # Employees ServiceNow location update: 
-    locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
-    
-    # Handle duplicates in df1 by keeping the first occurrence
-    endusers_list = endusers_list.drop_duplicates(subset='name', keep='first')
     
     # Update DataFrame Location' column based on matching 'Caller' with 'Name'
     df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
@@ -360,11 +363,11 @@ def ITSM_Incident_Portal():
     df['Assigned to'] = df['Assigned to'].replace('nan', 'System')
 
     #Creating a time difference variable to calculate SLA Compliance:
-    def calculate_sla(row, start_col, end_col, date_format='%Y-%m-%d %H:%M:%S'):
-        #df['Updated'] = pd.to_datetime(df['Updated'], format="%d/%m/%Y %H:%M:%S")
-        #df['Due date'] = pd.to_datetime(df['Due date'], format="%d/%m/%Y %H:%M:%S")
-        #pd.to_datetime(df["date"], format='mixed', dayfirst=True)
-        hours = 0  # Initialize hours with a default value
+    #Creating a time difference variable to calculate SLA Compliance:
+    def calculate_sla(row, start_col, end_col, date_format='mixed'):
+        df['Due date'] = pd.to_datetime(df['Due date'], format='mixed')
+        df['Updated'] = pd.to_datetime(df['Updated'], format='mixed')
+
         # Convert the strings to datetime objects
         start_dt = row[start_col]
         end_dt = row[end_col]
@@ -409,8 +412,7 @@ def ITSM_Incident_Portal():
     df['Updated']= pd.to_datetime(df['Updated'], errors='coerce')
     df['Year'] = df['Updated'].dt.year
     df['Year'] = df['Year'].astype(str)
-
-    
+ 
     # Calculate time differences in hours:() / 
     df['time_difference_testing'] = (df['Updated'] - df['Due date']).dt.total_seconds() / 3600
 
@@ -430,7 +432,10 @@ def ITSM_Incident_Portal():
     # Start Building a Board:
     with st.sidebar:
         st.markdown("<h2 style='text-align: left;'>Regional Service Group Analysis</h2>", unsafe_allow_html=True)
-        st.image("C:/Users/Gomolemo.Kototsi/Downloads/logo-c-fc-steinweg2x.png", use_column_width=True)  
+        import os
+        #bridge_path = os.path.join('Images','Steinweg.png')
+        st.image("/workspaces/DataHub-App/Images/logo-c-fc-steinweg2x.png")
+        #st.image(bridge, use_column_width=True)
     
         # Initial selection summary:
         if st.checkbox("ALL IT PERSONNEL", value=True):
@@ -458,6 +463,7 @@ def ITSM_Incident_Portal():
     # Sort the DataFrame by the 'Month' column
     df = df.sort_values('Month')
 
+    #print(df['State']== 'On Hold')
     #calculating the net tickets/load analysis for my IT Group as YTD tickets completed: 
     # Function to calculate net tickets: - A measure of Work Accrual: 
     def calculate_net_tickets(df):
@@ -474,7 +480,6 @@ def ITSM_Incident_Portal():
     filtered_data = df[(df['State'].isin(selected_status)) & (df['Assigned to'].isin(selected_personnel) & (df["Year"].isin(selected_year)))]
     
     # Creating Sub-Data Tables to use for my visualisations:
-    
     # State category totals: 
     name_category_totals = filtered_data.groupby(['State', 'Assigned to','category'])['Number'].count().reset_index(name='Count')
     #category_totals:
@@ -493,19 +498,23 @@ def ITSM_Incident_Portal():
     
     # Creating A Interactive IT Personnel Contribution Result Metric: 
     total_counts = filtered_category_totals['Count'].sum()
-    
+
     def ensure_all_states(df, required_states=None):
+        missing_states = []
         if required_states is None:
             required_states = ['In Progress', 'New', 'On Hold', 'Canceled','Resolved']
             
         # Check for missing states and add them with a count of zero    
         for state in required_states:
             if state not in df['State'].values:
-                df = df.append({'State': state, 'Count': 0}, ignore_index=True)          
+                missing_states.append({'State': state, 'Count': 0})
+                
+         # If there are missing states, create a DataFrame and concatenate it with the original
+        if missing_states:
+            missing_df = pd.DataFrame(missing_states)
+            df = pd.concat([df, missing_df], ignore_index=True)
+  
         return df
-    
-    
-    
     #Creating a useable dataframe: 
     filtered_category_totals = ensure_all_states(filtered_category_totals,selected_status)
 
@@ -634,26 +643,29 @@ def ITSM_Incident_Portal():
     total_count = state_counts.get('total', 0)
     percentage_total =  percentage_on_hold+percentage_resolved+percentage_new+percentage_in_progress+percentage_cancelled
 
-    # Path to your local SVG file:
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+    #st.image(svg_url, caption='Architectural Data Design for the Dashboard', use_column_width=True)
+    local_svg_path = os.path.join('Images', 'family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    warning_path = os.path.join('Images', 'warning.svg')
+    account_path = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    #groups_iconspath = os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     icon_url = encode_image(local_svg_path)
-    icon_url1 = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/warning.svg')
-    icon_url2 = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-    groups_loc = 'C:/Users/Gomolemo.Kototsi/Downloads/group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+    icon_url1 = encode_image(warning_path)
+    icon_url2 = encode_image(account_path)
+    groups_loc = os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     groups_icon = encode_image(groups_loc)
     
     # A holding Matrice for  local SVG file: - Paths & Urls 
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
-    local_sa = 'C:/Users/Gomolemo.Kototsi/Downloads/south-africa-flag-icon.svg'
-    local_zim = 'C:/Users/Gomolemo.Kototsi/Downloads/Flag_of_Zimbabwe.svg'
-    local_ken = 'C:/Users/Gomolemo.Kototsi/Downloads/kenya-flag-icon.svg'
-    local_tan = 'C:/Users/Gomolemo.Kototsi/Downloads/tanzania-flag-icon.svg'
-    local_zam ='C:/Users/Gomolemo.Kototsi/Downloads/zambia-flag-icon.svg'
-    local_mal = 'C:/Users/Gomolemo.Kototsi/Downloads/malawi-svgrepo-com.svg'
-    local_moz ='C:/Users/Gomolemo.Kototsi/Downloads/mozambique-flag-icon.svg'
-    local_nam = 'C:/Users/Gomolemo.Kototsi/Downloads/Namibia-01-1.svg'
+    local_svg_path = os.path.join('Images', 'family_history_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    local_sa = os.path.join('Images', 'south-africa-flag-icon.svg')
+    local_zim = os.path.join('Images', 'Flag_of_Zimbabwe.svg')
+    local_ken = os.path.join('Images', 'kenya-flag-icon.svg')
+    local_tan = os.path.join('Images', 'tanzania-flag-icon.svg')
+    local_zam = os.path.join('Images', 'zambia-flag-icon.svg')
+    local_mal = os.path.join('Images', 'malawi-svgrepo-com.svg')
+    local_moz = os.path.join('Images', 'mozambique-flag-icon.svg')
+    local_nam = os.path.join('Images', 'Namibia-01-1.svg')
     
-    
+    #Images/Namibia-01-1.svg
     south_african = encode_image(local_sa)
     Zimbabwe = encode_image(local_zim)
     Tanzania = encode_image(local_tan)
@@ -661,17 +673,21 @@ def ITSM_Incident_Portal():
     Zambia = encode_image(local_zam)
     Mozambique = encode_image(local_moz)
     Malawi=encode_image(local_mal)
-    Namibia =encode_image(local_nam)
+    #Namibia =encode_image(local_nam)
     
     # Getting a icon using CSS style:- Highest IT Personnel
-    with open("C:/Users/Gomolemo.Kototsi/Downloads/account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
+    Svg_path_paths = os.path.join('Images', 'account_circle_78dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg') 
+    #svg_icon = encode_image(Svg_path_paths)
+    with open(Svg_path_paths, "r") as file:
         svg_icon = file.read()
-     
-     # Getting a icon using CSS style: - Highest 
-    with open("C:/Users/Gomolemo.Kototsi/Downloads/group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg", "r") as file:
-        groups_icon = file.read()
-    
     # Creating a Dictionary for my Countries Flags:
+    groups_icon_path =  os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    # Getting a icon using CSS style: - 
+    
+    with open(groups_icon_path, "r") as file:
+        #groups_icon_path =  os.path.join('Images', 'group_add_61dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+        groups_icon = file.read()
+
     data = {
         'Country': ['South Africa', 'Zimbabwe','Mozambique', 'Tanzania','Kenya','Zambia','Malawi'],
         'Flag_URL': [
@@ -933,7 +949,7 @@ def ITSM_Incident_Portal():
         # Top IT Personnel:
         title_person = f'IT Personnel: {max_user}'
         value_person = f'Assigned Total: {str(max_incident_count)}'
-        delta_person = f'Contribution: {str(percentage)}'
+        delta_person = f'Contribution: {str(percentage)}%'
         #group_with_max_incidents, group_max_incident_count, percentage_group = get_max_group(service_groups, selected_status)
         #Top Service Group
         title_group = f'IT Service Group: {group_with_max_incidents}'
@@ -1150,12 +1166,19 @@ def ITSM_Incident_Portal():
         st.markdown(pmg_him, unsafe_allow_html=True)
         with st.container():
             #col1, col2, col3, = st.columns(3)
-            svg_progress = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/pending_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_new = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/domain_add_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_resolved = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/editor_choice_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_total = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/dataset_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_hold = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/back_hand_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
-            svg_cancelled = encode_image('C:/Users/Gomolemo.Kototsi/Downloads/delete_forever_40dp_3E6184_FILL0_wght400_GRAD0_opsz40.svg')
+            #col1, col2, col3, = st.columns(3):
+            svg_progress_path =  os.path.join('Images', 'pending_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_new_path =  os.path.join('Images', 'domain_add_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_resolved_path =  os.path.join('Images', 'editor_choice_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_total_path =  os.path.join('Images', 'dataset_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_hold_path =  os.path.join('Images', 'back_hand_50dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+            svg_cancelled_path =  os.path.join('Images', 'delete_forever_40dp_3E6184_FILL0_wght400_GRAD0_opsz40.svg')
+            svg_progress = encode_image(svg_progress_path)
+            svg_new = encode_image(svg_new_path)
+            svg_resolved = encode_image(svg_resolved_path)
+            svg_total =  encode_image(svg_total_path)
+            svg_hold = encode_image(svg_hold_path)
+            svg_cancelled = encode_image(svg_cancelled_path)
             def iconMetricContainer(label, value, delta, icon_url):
                 html = f"""
                 <div data-testid="stMetric" style=" display: flex; align-items: center; justify-content: space-between;">
@@ -1190,24 +1213,27 @@ def Testing_Thoughts():
     import base64
     import plotly.graph_objects as go
     import matplotlib.pyplot as plt
-    
-    
-    #Data Source Import: 
-    loc1= "C:/Users/Gomolemo.Kototsi/Downloads/incident.csv"
-    data1 = pd.read_csv(loc1, encoding='ISO-8859-1')
-    
-    InProgress= "C:/Users/Gomolemo.Kototsi/Downloads/InProgress.csv"
-    InProgress = pd.read_csv(InProgress, encoding='ISO-8859-1')
+    from PIL import Image
+    import matplotlib.pyplot as plt
+    import base64
+    import requests
+    from io import StringIO
+    import os
+      
+    #Importing data  
+    sys_path = 'https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/sys_user.csv'
+    New = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/New.csv')
+    Resolved = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Resolved.csv',encoding='latin')
+    data = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident.csv')
+    InProgress = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/InProgress.csv', encoding='latin')
+    dataA = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/Incident_A.csv')
+    dataB = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_B.csv')
+    dataC = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_C.csv')
+    dataD = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/incident_D.csv')
+    OnHold = pd.read_csv('https://raw.githubusercontent.com/GomolemoKototsiAnalyst/DataHub-App/main/Raw%20data/OnHold_1.csv')
+    endusers_list = pd.read_csv(sys_path)
 
-    Resolved= "C:/Users/Gomolemo.Kototsi/Downloads/Resolved.csv"
-    Resolved = pd.read_csv(Resolved, encoding='ISO-8859-1')
-
-    OnHold= "C:/Users/Gomolemo.Kototsi/Downloads/OnHold.csv"
-    OnHold = pd.read_csv(OnHold, encoding='ISO-8859-1')
-
-    New= "C:/Users/Gomolemo.Kototsi/Downloads/New.csv"
-    New = pd.read_csv(New, encoding='ISO-8859-1')
-    
+    #Loading the data into Python - Data Source Service Now SQL DataBase Sample size to Excel:
     #Renaming the columns for a unilateral intake:
     InProgress.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
@@ -1222,75 +1248,35 @@ def Testing_Thoughts():
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
 
     #data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
-       #'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
-    
-    data1.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+     #  'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+
+    data.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
        'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataA.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataB.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataC.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+    dataD.rename(columns={'number': 'Number', 'due_date': 'Due date', 'short_description':'Short description','caller_id':'Caller', 'priority':'Priority',
+       'state':'State', 'category':'Category', 'assignment_group':'Assignment group', 'assigned_to':'Assigned to','sys_updated_on':'Updated','sys_updated_by':'Updated by' ,'u_service_offering_subcategory':'Service offering subcategory' }, inplace=True)
+   
+    #Working Merged Dataframe: 
+    df_merged= pd.concat([data,dataA,dataB,dataC,dataD, InProgress, OnHold, New, Resolved], ignore_index=True)
+
+    #ETL Process to create multiple data marts:: 
+    df = df_merged[df_merged['Assignment group'].str.contains("ZA - Bridge Connect|ZA - SAP Support|ZA - Cargo Wise Support|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
     
-    # Employees ServiceNow location update: 
-    locate= "C:/Users/Gomolemo.Kototsi/Downloads/sys_user.csv"
-    endusers_list = pd.read_csv(locate, encoding='ISO-8859-1')
-    
-    # Handle duplicates in df1 by keeping the first occurrence
-    endusers_list = endusers_list.drop_duplicates(subset='name', keep='first') 
-    
-    #ETL Process:
-    df_merged= pd.concat([data1, InProgress, OnHold, New, Resolved], ignore_index=True)
-                         
-    df_merged.loc[df_merged['State'] == 'Closed', 'State'] = 'Resolved'
+    # Update DataFrame Location' column based on matching 'Caller' with 'Name'
+    df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
+
+    df['State'] = df['State'].replace('Closed', 'Resolved')
+
+    df['Assigned to'] = df['Assigned to'].replace('nan', 'System')
                          
     df_merged.State.unique()                
                          
-    # filtering our working dataframe with the Assignment groups that matter: 
-    df = df_merged[df_merged['Assignment group'].str.contains("ZA - Cargo Wise Support|ZA - Bridge Connect|'ZA - SAP Support'|ZA - BOS Support|ZA - Carlo Support|ZA - OVB Techs|ZA - Service Desk|ZA - Infrastructure Support",case=False , na=False)]
-                                 
-    #Creating a time difference variable to calculate SLA Compliance:
-    def calculate_sla(row, start_col, end_col, date_format='%Y-%m-%d %H:%M:%S'):
-        
-        df['Due date'] = pd.to_datetime(df['Due date'], errors='coerce')
-        df['Updated']= pd.to_datetime(df['Updated'], errors='coerce')
-        # Convert the strings to datetime objects
-        start_dt = row[start_col]
-        end_dt = row[end_col]
-    
-        ## I have noticed that when I am trying to get the difference of time in hours I am getting an error because the date time column is not
-        # passed the correct way so I need to force it 
-        if not isinstance(start_dt, datetime):
-            start_dt = pd.to_datetime(start_dt)
-        if not isinstance(end_dt, datetime):
-            end_dt = pd.to_datetime(end_dt)
-    
-        # If the start and end date are the same, calculate the difference in hours
-        if start_dt.date() == end_dt.date():
-            delta = end_dt - start_dt   # Definind the difference
-            hours = delta.seconds / 3600  # hours
-            return f"{hours} hours"
-    
-        # Calculate the difference excluding weekends: I dont want my weekends to be added to the calculation of the SLA
-        total_days = 0
-        current_dt = start_dt
-    
-        while current_dt.date() < end_dt.date():
-            if current_dt.weekday() < 5:  # Monday to Friday are 0 to 4
-                total_days += 1
-            current_dt += timedelta(days=1)
-    
-        # Subtract 1 if the end date is a weekday and not included in the count yet
-        if end_dt.weekday() < 5:
-            total_days += 1
-        #"{total_days} days"
-    
-        return f"{total_days} days"
-
-    def calculate_timetaken_for_ticketcompletion(df, start_col, end_col,date_format='%Y-%m-%d %H:%M:%S'):
-        return df.apply(calculate_sla, axis=1, start_col=start_col, end_col=end_col, date_format=date_format)
-    
-    df['time_difference'] = calculate_timetaken_for_ticketcompletion(df, 'Due date', 'Updated',date_format='%Y-%m-%d %H:%M:%S')
-    
-    #Update DataFrame 2's 'Location' column based on matching 'Caller' with 'Name'
-    df['country'] = df['Caller'].map(endusers_list.set_index('name')['location'])
-           
-    # Coercing the date:                      
+    # # Coercing the date:                      
     df['Due date'] = pd.to_datetime(df['Due date'], errors='coerce')
     df['Updated']= pd.to_datetime(df['Updated'], errors='coerce')
 
@@ -1299,11 +1285,13 @@ def Testing_Thoughts():
     df['open_Time'] = df['Due date'].dt.time
     df['close_Date'] =  df['Updated'].dt.date
     df['close_Time'] = df['Updated'].dt.time
-    df['Year'] = df['Due date'].dt.year
-
+    #df['Year'] = df['Due date'].dt.year 
+   
     #delete all the tickets that are ServiceNow as resolved even though they were recalled by the caller:  Using the Query statement
     filter = df['Short description'].str.contains('Recall');
-    clean_df = df[~filter];
+    clean_df = df[~filter]; 
+
+    # Dealing with the months: 
     
     clean_df['Month_1'] = pd.to_datetime(clean_df['open_Date'], format='%Y-%m')
 
@@ -1352,39 +1340,20 @@ def Testing_Thoughts():
 
     # Updating the Current Dataframe: 
     counts_df = no_incidents_logged_per_month(clean_df, 'Month', 'Assignment group', options)
-    
-    
+
     #Calculate time differences in hours
-    #clean_df['time_difference_testing'] = (clean_df['Updated'] - clean_df['Due date']).dt.total_seconds() / 3600
-    #def categorize_difference(diff_hours):
-    #    try:
-    #        # Convert diff_hours to float if it's a string or non-integer value
-    #        diff_hours = float(diff_hours)
-        
-     #       # Continue with your logic
-     #       if 0 <= diff_hours <= 72:
-      #          return 'Met SLA'
-       #     elif diff_hours > 72:
-       #         return 'Breach SLA'
-       # except ValueError:
-       #     return 'Invalid time difference'
-        
+    clean_df['time_difference_testing'] = (clean_df['Updated'] - clean_df['Due date']).dt.total_seconds() / 3600
+
     # Categorize the time differences
     def categorize_difference(diff_hours):
         if diff_hours < 72:
             return 'Met SLA'
         else:
             return 'Breach SLA'
-            
-    clean_df['time_difference'] = pd.to_numeric(clean_df['time_difference'], errors='coerce')
     
     # Updating the Current Dataframe with the Calcultated Categories: 
-    clean_df['category'] = clean_df['time_difference'].apply(categorize_difference)
-
- 
-    #clean_df['time_difference'] = calculate_timetaken_for_ticketcompletion(clean_df, 'Due date', 'Updated',date_format='%Y-%m-%d %H:%M:%S')
-    #df['time_difference'] = df.apply(lambda row: calculate_sla(row, 'Due date', 'Updated'), axis=1)
-      
+    clean_df['category'] = clean_df['time_difference_testing'].apply(categorize_difference)
+    
     # Filter the DataFrame
     df_not_met_sla = clean_df[clean_df['category'] == 'Breach SLA']
     df_met_sla = clean_df[clean_df['category'] == 'Met SLA']
@@ -1397,9 +1366,9 @@ def Testing_Thoughts():
         return f"data:image/svg+xml;base64,{encoded}"
     
     
-    # Path to your local SVG file: 
-    local_svg_path = 'C:/Users/Gomolemo.Kototsi/Downloads/report_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
-    local_breach = 'C:/Users/Gomolemo.Kototsi/Downloads/new_releases_53dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg'
+   #svg_progress = encode_image(svg_progress_path)
+    local_svg_path = os.path.join('Images', 'report_64dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
+    local_breach = os.path.join('Images', 'new_releases_53dp_3E6184_FILL0_wght400_GRAD0_opsz48.svg')
     
     # Converting the image to an SVG icon: 
     icon_testing = encode_image(local_svg_path)
@@ -1432,12 +1401,19 @@ def Testing_Thoughts():
     
     clean_df['country'] = clean_df['country'].astype(str)
 
+    clean_df['Updated']= pd.to_datetime(df['Updated'])
+    clean_df['Year']  = clean_df['Updated'].dt.strftime("%Y")
+    #clean_d['Year'] = clean_df['Updated'].dt.year
     clean_df['Year'] = clean_df['Year'].astype(str)
+    #clean_df['Year'] = clean_df['Year'].astype(str)
                          
     # Creating a Sidebar for the New Page: 
     with st.sidebar:
-        #st.markdown("<h3 style='text-align: left;'>SLA FILTERI</h3>", unsafe_allow_html=True)
-        st.image("C:/Users/Gomolemo.Kototsi/Downloads/logo-c-fc-steinweg2x.png", use_column_width=True)  # Insert your image here
+        st.markdown("<h3 style='text-align: left;'>SLA Compliance</h3>", unsafe_allow_html=True)
+        import os
+        #bridge_path = os.path.join('Images','Steinweg.png')
+        st.image("/workspaces/DataHub-App/Images/logo-c-fc-steinweg2x.png")
+
         # Initial selection summary:
         if st.checkbox("Select All Months", value=True):
             selected_month = sorted(clean_df["Month"].unique())
@@ -1449,7 +1425,8 @@ def Testing_Thoughts():
             selected_countries = st.multiselect("Choose countries",sorted((clean_df["country"]).unique()), default=sorted(clean_df["country"].unique()))
     
         # Interactive Color themes:
-        selected_year = st.multiselect('Select a Year',sorted((clean_df["Year"]).unique()),default=sorted(clean_df["Year"].unique()))                                     
+        selected_year = st.sidebar.multiselect("Select a Year",clean_df["Year"].unique(),default=clean_df["Year"].unique())
+        #selected_year = st.multiselect('Select a Year',sorted((clean_df["Year"]).unique()),default=sorted(clean_df["Year"].unique()))                                     
         selected_color_theme = st.selectbox('Select a color theme', list(color_theme_list.keys()))
     
     # Generic Interactive Dataframe: 
@@ -1939,7 +1916,7 @@ def Information_Portal():
     """)
     # Display image from local file
     # Method 1: Using st.image with a URL
-    svg_url = 'C:/Users/Gomolemo.Kototsi/Downloads/Architectural Design Map.svg'
+    svg_url = os.path.join('Images', 'Architectural Design Map.svg')
     st.image(svg_url, caption='Architectural Data Design for the Dashboard', use_column_width=True)
     st.markdown(
         """
@@ -1959,15 +1936,15 @@ def Information_Portal():
         ###### SLA compliance Reporting:
     """)
 
-    image_first = 'C:/Users/Gomolemo.Kototsi/Downloads/Regional_analysis diagram configuration.png'   
-    image_second = 'C:/Users/Gomolemo.Kototsi/Downloads/Compliance_architects explaination.png'  
+    image_first =  os.path.join('Images', 'Regional_analysis diagram configuration.png')
+    image_second = os.path.join('Images', 'Compliance_architects explaination.png') 
     
     ### Work Accrual Board
     image_a = Image.open(image_first)
     image_b = Image.open(image_second)
     
     ### The first Photo:
-    st.image(image_b, caption='SLA Compliance Report by IT Personnel & Incidents Life-cycle', use_column_width=True)
+    st.image(image_a, caption='Southern and Eastern African region IT Incident Management Analysis', use_column_width=True)
     st.markdown(
         """
         Breakdown of the components in the above dashboard:
@@ -2020,7 +1997,7 @@ def SteinTech():
     import pandas as pd
 
     # Using Markdown for Cool things: 
-    st.markdown(f"# {list(page_names_to_funcs.keys())[4]}")
+    #st.markdown(f"# {list(page_names_to_funcs.keys())[4]}")
     st.markdown(
         """
         SteinTech this Week Find the Cool things to do in with SteinTech.......
@@ -2030,29 +2007,30 @@ def SteinTech():
     
 # Function to resize icons and convert to base64
 def get_resized_icon(image_path, width):
-    img = Image.open(image_path)
-    aspect_ratio = img.height / img.width
-    resized_img = img.resize((width, int(width * aspect_ratio)))
-    buffered = BytesIO()
-    resized_img.save(buffered, format="PNG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
-    return img_str
+    try:
+        img = Image.open(image_path)
+        aspect_ratio = img.height / img.width
+        resized_img = img.resize((width, int(width * aspect_ratio)))
+        buffered = BytesIO()
+        resized_img.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue()).decode()
+        return img_str
+    except FileNotFoundError:
+        print(f"File not found: {image_path}")
+        return None
 
 # Load icons:
-home_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-analysis_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/public_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-compliance_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/bar_chart_4_bars_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-info_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/architecture_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
-SteinTech_icon = get_resized_icon("C:/Users/Gomolemo.Kototsi/Downloads/bubble_chart_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png",50)
+home_path = os.path.join('Images', 'home_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+analysis_path= os.path.join('Images', 'public_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+complianc_path= os.path.join('Images', 'bar_chart_4_bars_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+info_path= os.path.join('Images', 'architecture_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
+SteinTecho_path= os.path.join('Images', 'bubble_chart_48dp_3E6184_FILL0_wght400_GRAD0_opsz48.png')
 
-# Creating a pages matrix: 
-#page_names_to_funcs = {
- #  "Home": intro,
-  # "Architectural Design Information": Information_Portal, 
- #  "Regional Analysis": ITSM_Incident_Portal,
- #  "SLA Compliance Reporting": Testing_Thoughts,
-#    "SteinTech": SteinTech
-#}
+home_icon = get_resized_icon(home_path,50)
+analysis_icon = get_resized_icon(analysis_path,50)
+compliance_icon = get_resized_icon(complianc_path,50)
+info_icon = get_resized_icon(info_path,50)
+SteinTech_icon = get_resized_icon(SteinTecho_path,50)
 
 icons = {
     "Home": home_icon,
@@ -2146,217 +2124,3 @@ if page == "SLA Compliance Reporting":
     Testing_Thoughts()
 if page == "SteinTech":
     SteinTech()
-
-
-# # Injecting custom CSS for the sidebar
-# st.markdown("""
-#     <style>
-#     /* Sidebar background */
-#     [data-testid="stSidebar"] {
-#         background-color: #f0f0f5;
-#         border-right: 2px solid #e6e6ff;
-#     }
-# 
-#     /* Menu header styling */
-#     [data-testid="stSidebar"] h3 {
-#         color: #4e73df;
-#         font-family: 'Arial';
-#         font-weight: bold;
-#         font-size: 24px;
-#     }
-# 
-#     /* Menu options styling */
-#     [data-testid="stSidebar"] label {
-#         color: #3e6184;
-#         font-family: 'Helvetica';
-#         font-weight: 500;
-#         font-size: 18px;
-#     }
-# 
-#     /* Selected radio button styling */
-#     [data-testid="stSidebar"] .stRadio div[role='radiogroup'] label {
-#         background-color: #4e73df;
-#         border-radius: 5px;
-#         padding: 5px;
-#         color: white;
-#     }
-# 
-#     /* Hover effect for radio options */
-#     [data-testid="stSidebar"] .stRadio div[role='radiogroup'] label:hover {
-#         background-color: #3e6184;
-#         color: #fff;
-#     }  
-# 
-#     </style>
-#     """, unsafe_allow_html=True)
-# 
-# with st.sidebar:
-#     selected_page = st.radio(
-#         "MENU", 
-#         ["Home", "Architectural Design Information","Regional Analysis", "SLA Compliance Reporting", "SteinTech"])
-#     
-# if selected_page == "Home":
-#     intro()
-# if selected_page == "Architectural Design Information":
-#     Information_Portal()
-# if selected_page == "Regional Analysis":
-#     ITSM_Incident_Portal()
-# if selected_page == "SLA Compliance Reporting":
-#     Testing_Thoughts()
-# if selected_page == "SteinTech":
-#     SteinTech()
-
-# #CSS for custom sidebar
-# st.markdown("""
-#     <style>
-#     .icon-text {
-#         display: flex;
-#         align-items: center;
-#         padding: 10px;
-#         cursor: pointer;
-#         border-radius: 5px;
-#         margin-bottom: 10px;
-#         color: black;
-#     }
-#     .icon-text:hover {
-#         background-color: #f0f0f0;
-#     }
-#     .icon-text img {
-#         margin-right: 10px;
-#     }
-#     .icon-text span {
-#         font-size: 16px;
-#         color: black; 
-#     </style>
-#     """, unsafe_allow_html=True)
-# 
-# 
-# # Initialize session state if not set
-# if 'page' not in st.session_state:
-#     st.session_state.page = "Home"
-#     
-# # Initialize session state if not set
-# if 'Architectural Design Information' in st.session_state:
-#     st.session_state.page = "Architectural Design Information"
-# # Initialize session state if not set
-# if 'Regional Analysis' in st.session_state:
-#     st.session_state.page = "Regional Analysis"
-# # Initialize session state if not set
-# if 'SLA Compliance Reporting' in st.session_state:
-#     st.session_state.page = "SLA Compliance Reporting"
-#     
-# # Initialize session state if not set
-# if 'SteinTech' in st.session_state:
-#     st.session_state.page = "SteinTech"    
-# 
-# # Function to create sidebar item
-# def sidebar_item(page_name,icon):
-#     st.sidebar.markdown(
-#         f"""
-#         <a href="/?page={page_name}" style="text-decoration: none;">
-#         <div class="icon-text">
-#             <img src="data:image/png;base64,{icon}">
-#             <span>{page_name}</span>
-#         </div>
-#         </a>
-#         """,
-#         unsafe_allow_html=True
-#     )
-#     
-# def main_sidebar():
-#     sidebar_item("Home", home_icon)
-#     sidebar_item("Architectural Design Information", info_icon)
-#     sidebar_item("Regional Analysis",analysis_icon)
-#     sidebar_item("SLA Compliance Reporting",compliance_icon)
-#     sidebar_item("SteinTech",SteinTech_icon)
-#     
-#     
-# # Display the main sidebar
-# main_sidebar()
-# 
-# # Handle page navigation
-# 
-# #warnings.filterwarnings("ignore", category=FutureWarning, module="streamlit")
-# query_params = st.experimental_get_query_params()
-# #showWarningOnDirectExecution = False
-# page = query_params.get("page", ["Home"])[0]
-# 
-# # Display the selected page
-# if page in page_names_to_funcs:
-#     if page == "Home":
-#         intro()
-#     elif page == "Architectural Design Information":
-#         Information_Portal()
-#     elif page == "Regional Analysis":
-#         ITSM_Incident_Portal()
-#     elif page == "SLA Compliance Reporting":
-#         Testing_Thoughts()
-#     elif page == "SteinTech":
-#         SteinTech()
-#     else:
-#         page_names_to_funcs[page]()
-# else:
-#     intro()
-
-# import streamlit as st
-# import base64
-# 
-# # Sample function to encode an image as base64
-# def load_icon(file_path):
-#     with open(file_path, "rb") as image_file:
-#         encoded_string = base64.b64encode(image_file.read()).decode()
-#     return encoded_string
-# 
-# # Sidebar item with icon
-# def sidebar_item(page_name, icon):
-#     selected = st.session_state.get('selected_page', 'Home')
-#     
-#     # Determine if this is the selected page
-#     if page_name == selected:
-#         background_color = "#f39c12"
-#         font_weight = "bold"
-#     else:
-#         background_color = "transparent"
-#         font_weight = "normal"
-#         
-#     st.sidebar.markdown(
-#         f"""
-#         <div style="display: flex; align-items: center; background-color: {background_color}; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-#             <img src="data:image/png;base64,{icon}" width="30" style="margin-right: 10px;">
-#             <a href="#" style="text-decoration: none; color: black; font-weight: {font_weight};">{page_name}</a>
-#         </div>
-#         """,
-#         unsafe_allow_html=True
-#     )
-# 
-# # Define a list of page names and icons
-# pages = [
-#     {"name": "Home", "icon": load_icon("path_to_home_icon.png")},
-#     {"name": "Architectural Design Information", "icon": load_icon("path_to_architecture_icon.png")},
-#     {"name": "Regional Analysis", "icon": load_icon("path_to_analysis_icon.png")},
-#     {"name": "SLA Compliance Reporting", "icon": load_icon("path_to_sla_icon.png")},
-#     {"name": "SteinTech", "icon": load_icon("path_to_steintech_icon.png")},
-# ]
-# 
-# # Sidebar navigation
-# for page in pages:
-#     sidebar_item(page["name"], page["icon"])
-# 
-# # Track selected page using session state
-# if "selected_page" not in st.session_state:
-#     st.session_state["selected_page"] = "Home"
-# 
-# # Content based on selected page
-# st.write(f"Selected page: {st.session_state['selected_page']}")
-# 
-# # Handle page selection logic (mimicking radio behavior)
-# for page in pages:
-#     if st.sidebar.button(f"Go to {page['name']}"):
-#         st.session_state["selected_page"] = page["name"]
-# 
-
-# In[ ]:
-
-
-
-

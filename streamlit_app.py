@@ -435,7 +435,7 @@ def ITSM_Incident_Portal():
         import os
         bridge_path = os.path.join('Images','Steinweg.png')
         #st.image("/workspaces/DataHub-App/Images/Steinweg.png")
-        st.image(bridge)
+        st.image(bridge_path)
     
         # Initial selection summary:
         if st.checkbox("ALL IT PERSONNEL", value=True):

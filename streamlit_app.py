@@ -434,7 +434,7 @@ def ITSM_Incident_Portal():
         st.markdown("<h2 style='text-align: left;'>Regional Service Group Analysis</h2>", unsafe_allow_html=True)
         import os
         #bridge_path = os.path.join('Images','Steinweg.png')
-        st.image("/workspaces/DataHub-App/Images/logo-c-fc-steinweg2x.png")
+        st.image("/workspaces/DataHub-App/Images/Steinweg.png")
         #st.image(bridge, use_column_width=True)
     
         # Initial selection summary:
@@ -1412,7 +1412,7 @@ def Testing_Thoughts():
         st.markdown("<h3 style='text-align: left;'>SLA Compliance</h3>", unsafe_allow_html=True)
         import os
         #bridge_path = os.path.join('Images','Steinweg.png')
-        st.image("/workspaces/DataHub-App/Images/logo-c-fc-steinweg2x.png")
+        st.image("/workspaces/DataHub-App/Images/Steinweg.png")
 
         # Initial selection summary:
         if st.checkbox("Select All Months", value=True):

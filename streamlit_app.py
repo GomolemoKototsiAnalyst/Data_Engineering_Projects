@@ -22,7 +22,7 @@ from PIL import Image
 import base64
 from io import BytesIO
 from streamlit_option_menu import option_menu
-import py3Dmol
+#import py3Dmol
 import warnings
 import os
 import requests
@@ -30,7 +30,7 @@ warnings.simplefilter(action='ignore', category=Warning)
 
 def intro():
     import streamlit as st
-    import py3Dmol
+    #import py3Dmol
     
     st.write("# Welcome to My Data Hub Portal! 👋")
     # Example content in a greyish-themed container

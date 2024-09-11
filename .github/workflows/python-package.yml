@@ -19,7 +19,7 @@ jobs:
         python-version: ["3.9", "3.10", "3.11"]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
@@ -27,17 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        python -m pip install numpy
-        python -m pip install pandas
-        python -m pip install plotly
-        python -m pip install matplotlib
-        python -m pip install Pillow
-        python -m pip install folium
-        python -m pip install altair
-        python -m pip install requests
-        python -m pip install streamlit
-        python -m pip install streamlit_option_menu
+        python -m pip install flake8 pytest numpy pandas plotly matplotlib Pillow folium altair requests streamlit streamlit_option_menu
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |

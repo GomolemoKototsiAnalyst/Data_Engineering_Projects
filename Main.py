@@ -401,10 +401,10 @@ def ITSM_Incident_Portal():
     
         return f"{total_days} days"
 
-    def calculate_timetaken_for_ticketcompletion(df, start_col, end_col,date_format='%Y-%m-%d %H:%M:%S'):
-        return df.apply(calculate_sla, axis=1, start_col=start_col, end_col=end_col, date_format=date_format)
+    #def calculate_timetaken_for_ticketcompletion(df, start_col, end_col,date_format='%Y-%m-%d %H:%M:%S'):
+        #return df.apply(calculate_sla, axis=1, start_col=start_col, end_col=end_col, date_format=date_format)
 
-    df['time_difference'] = calculate_timetaken_for_ticketcompletion(df, 'Due date', 'Updated',date_format='%Y-%m-%d %H:%M:%S')
+    #df['time_difference'] = calculate_timetaken_for_ticketcompletion(df, 'Due date', 'Updated',date_format='%Y-%m-%d %H:%M:%S')
     #df['time_difference'] = df.apply(lambda row: calculate_sla(row, 'Due date', 'Updated'), axis=1)
     
     # Coercing my time variable in order for me to have string time parameters

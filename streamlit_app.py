@@ -1982,13 +1982,6 @@ def Information_Portal():
         - Service Groups with the outter most request. 
         - Heatmap showing the regency and density of incidents managed for each country. 
         - Thirdly, We have an expander giving a synopsis on the metrics used to gather the data, and its intended end use.
-        #### Toolkit and Methodology Engaged:
-        It is important to mentioning the multiple sources used in gearing up the project to where it is now a portal. Furthermore, to mention some of the key problems encountered in the process of creating the boards. 
-        The programing language used in the project is primarily python housed by Anaconda/Jupyter Notebook. Objectively, borrowed from the open libraries such as streamlit, pandas, numpy, string plotly express and grapth objects, folium, base64 and etc. Notable mention also goes to OpenAI, Stack Overflow and Streamlit open source documentation. 
-        Additionally I would also thank the various inputs and consultations provided by Rea, Calin and Dexter for better representation of the dashboard and providing me with end-user insights on what would be key and valuable insights the boards to aim to provide.  
-        #### Conlcution:
-        I would like to Appreciate myself for starting the project at leisure for me to better my python skills and to show case my potential of ideally being a great data scientist.
-        ###### BYE SteinVEEZ.
     """)
     
 def SteinTech():
@@ -2117,10 +2110,10 @@ page = query_params.get("page", ["Home"])[0]
 if page == "Home":
     intro()
 if page == "Architectural Design Information":
-    Information_Portal()
+    #Information_Portal()
 if page == "Regional Analysis":
-    ITSM_Incident_Portal()
+    #ITSM_Incident_Portal()
 if page == "SLA Compliance Reporting":
-    Testing_Thoughts()
+    #Testing_Thoughts()
 if page == "SteinTech":
     SteinTech()

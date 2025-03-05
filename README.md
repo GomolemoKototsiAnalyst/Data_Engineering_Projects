@@ -7,6 +7,17 @@ In this project I was learning and putting my skills to practice for the data en
 -  Utilizing Azure Synapse Analytics for efficient data warehousing and analytics.
 -  Lastly, Integrated Azure Data Warehouse to Power BI.
 
+##### Data Engineering Frameworks Engaged: 
+
+- Azure Data Factory
+- Databricks
+- Azure Linked Services ( Microsoft Entra)
+- Azure Synapse Analytics
+- Python/PySpark
+- Azure SQL
+- Power BI
+
+
 Data Architecture Schema: 
 
 Steps: 

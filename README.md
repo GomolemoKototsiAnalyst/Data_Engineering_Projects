@@ -58,4 +58,6 @@ Steps:
   - SQL DataBase (Lake House = Built my Data Lake & Data Warehouse in the same resource reduce potential cloud costs and just built basic efficiencies in the resouce)
        - Created Tables using SQL **Openrowset** then Created multiple VIEWS to the Schema stored it in my Container named Premium/GOLD Layer.
 5. Reporting: Linking my Synapse SQL Severless Data Lake to Power BI:
- - CURRENLTY BUSY WITH THIS STEP....
+      - CURRENLTY BUSY WITH THIS STEP....
+
+This project was inspired by **Ansh Lamba**

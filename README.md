@@ -59,5 +59,6 @@ Steps:
        - Created Tables using SQL **Openrowset** then Created multiple VIEWS to the Schema stored it in my Container named Premium/GOLD Layer.
 5. Reporting: Linking my Synapse SQL Severless Data Lake to Power BI:
       - CURRENLTY BUSY WITH THIS STEP....
+![image](https://github.com/user-attachments/assets/9737a744-d7b2-4ae5-81b9-b2f23ad52ab4)
 
-This project was inspired by **Ansh Lamba**
+This project was inspired Ansh work on Data Engineering and me constantly following his Youtube material:

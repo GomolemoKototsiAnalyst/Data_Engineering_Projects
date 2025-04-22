@@ -1,0 +1,20 @@
+# Specify that Jupyter Notebooks should be treated as Python
+*.ipynb linguist-language=Python
+
+# Ignore certain file types for language statistics
+*.txt linguist-detectable=false
+*.csv linguist-detectable=false
+
+# Specify that Markdown files should be treated as text
+*.md text
+
+# Treat all .py files as Python
+*.py linguist-language=Python
+
+# Treat all .R files as R
+*.R linguist-language=R
+
+*.sql linguist-language=SQL
+
+# Treat all .js files as JavaScript
+*.js linguist-language=JavaScript
